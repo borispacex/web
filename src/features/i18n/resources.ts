@@ -26,10 +26,14 @@ export const resources = {
         light: 'Claro',
         dark: 'Oscuro',
       },
-      shell: {
+      hero: {
         eyebrow: 'Full Stack Developer · Freelance',
-        description: 'Desarrollo de sistemas, aplicaciones web y soluciones digitales.',
-        cta: 'Hablemos de tu proyecto',
+        titleStart: 'De la idea',
+        titleAccent: 'al deploy.',
+        description:
+          'Desarrollo sistemas, aplicaciones web y soluciones digitales pensadas para resolver problemas reales.',
+        primaryCta: 'Hablemos de tu proyecto',
+        manifesto: 'Code. Build. Deploy. Explore.',
       },
       footer: {
         copyright: '© {{year}} BORISPACEX. Todos los derechos reservados.',
@@ -64,10 +68,14 @@ export const resources = {
         light: 'Light',
         dark: 'Dark',
       },
-      shell: {
+      hero: {
         eyebrow: 'Full Stack Developer · Freelance',
-        description: 'Software systems, web applications and digital solutions.',
-        cta: "Let's talk about your project",
+        titleStart: 'From idea',
+        titleAccent: 'to deployment.',
+        description:
+          'I build software systems, web applications and digital solutions designed to solve real problems.',
+        primaryCta: "Let's talk about your project",
+        manifesto: 'Code. Build. Deploy. Explore.',
       },
       footer: {
         copyright: '© {{year}} BORISPACEX. All rights reserved.',
