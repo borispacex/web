@@ -1,5 +1,5 @@
 import { ArrowDownRight } from 'lucide-react';
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../../components/ui/Button';
 import { Container } from '../../components/ui/Container';
@@ -17,7 +17,7 @@ export function Hero() {
       id="inicio"
     >
       <Container className="grid min-h-[calc(100svh-4rem)] items-center gap-12 py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.95fr)] lg:py-24">
-        <motion.div
+        <m.div
           animate={{ opacity: 1, y: 0 }}
           className="relative z-10"
           initial={enterFrom}
@@ -45,9 +45,9 @@ export function Hero() {
               {t('hero.manifesto')}
             </p>
           </div>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           aria-hidden="true"
           animate={{ opacity: 1, scale: 1 }}
           className="hero__visual mx-auto aspect-square w-full max-w-[34rem]"
@@ -63,7 +63,7 @@ export function Hero() {
             <span />
             <span />
           </div>
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

@@ -6,7 +6,7 @@ type ButtonProps = ComponentPropsWithoutRef<'a'> & {
 
 const variants = {
   primary:
-    'bg-primary text-white hover:brightness-110 active:brightness-95',
+    'bg-primary-strong text-white hover:brightness-110 active:brightness-95',
   secondary:
     'border border-border bg-surface text-foreground hover:bg-surface-alt',
 } as const;

@@ -9,8 +9,12 @@ const isTheme = (value: string | null): value is Theme =>
   themes.some((theme) => theme === value);
 
 export const getStoredTheme = (): Theme => {
-  const storedTheme = localStorage.getItem(storageKey);
-  return isTheme(storedTheme) ? storedTheme : 'system';
+  try {
+    const storedTheme = localStorage.getItem(storageKey);
+    return isTheme(storedTheme) ? storedTheme : 'system';
+  } catch {
+    return 'system';
+  }
 };
 
 const applyTheme = (theme: Theme): void => {
@@ -26,7 +30,12 @@ const applyTheme = (theme: Theme): void => {
 };
 
 export const setTheme = (theme: Theme): void => {
-  localStorage.setItem(storageKey, theme);
+  try {
+    localStorage.setItem(storageKey, theme);
+  } catch {
+    // The selected theme still applies for the current session.
+  }
+
   applyTheme(theme);
 };
 

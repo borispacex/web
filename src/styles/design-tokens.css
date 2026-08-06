@@ -8,6 +8,7 @@
   --text-secondary: #66758a;
   --border: #d7dee8;
   --primary: #1677ff;
+  --primary-strong: #075dcc;
   --accent: #35b9ff;
   --focus-ring: color-mix(in srgb, var(--primary) 70%, transparent);
 }
@@ -22,5 +23,6 @@
   --text-secondary: #8996a8;
   --border: #1d3555;
   --primary: #1677ff;
+  --primary-strong: #0b63d8;
   --accent: #35b9ff;
 }

@@ -6,7 +6,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-surface" id="contacto">
+    <footer className="border-t border-border bg-surface">
       <Container className="flex flex-col gap-3 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>{t('footer.copyright', { year: currentYear })}</p>
         <a className="w-fit font-medium text-foreground" href="#inicio">

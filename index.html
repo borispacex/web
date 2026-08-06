@@ -7,12 +7,34 @@
       name="description"
       content="BORISPACEX desarrolla sistemas, aplicaciones web y soluciones digitales."
     />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#F5F7FA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BORISPACEX" />
+    <meta property="og:locale" content="es_BO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="BORISPACEX · Desarrollador Full Stack" />
+    <meta
+      property="og:description"
+      content="Sistemas, aplicaciones web y soluciones digitales pensadas para resolver problemas reales."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="BORISPACEX · Desarrollador Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Sistemas, aplicaciones web y soluciones digitales pensadas para resolver problemas reales."
+    />
     <title>BORISPACEX · Full Stack Developer</title>
     <script>
       (() => {
         const storageKey = 'borispacex-theme';
-        const storedTheme = localStorage.getItem(storageKey);
+        let storedTheme = null;
+
+        try {
+          storedTheme = localStorage.getItem(storageKey);
+        } catch {
+          storedTheme = null;
+        }
         const theme = ['light', 'dark', 'system'].includes(storedTheme)
           ? storedTheme
           : 'system';
@@ -22,9 +44,11 @@
 
         document.documentElement.classList.toggle('dark', isDark);
         document.documentElement.dataset.theme = theme;
-        document.querySelector('meta[name="theme-color"]').content = isDark
-          ? '#05070D'
-          : '#F5F7FA';
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+
+        if (themeColor) {
+          themeColor.content = isDark ? '#05070D' : '#F5F7FA';
+        }
       })();
     </script>
   </head>
