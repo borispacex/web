@@ -7,6 +7,8 @@ import { ThemeSelector } from '../ui/ThemeSelector';
 
 const navigationItems = [
   { href: '#inicio', translationKey: 'navigation.home' },
+  { href: '#servicios', translationKey: 'navigation.services' },
+  { href: '#proyectos', translationKey: 'navigation.projects' },
   { href: '#contacto', translationKey: 'navigation.contact' },
 ] as const;
 

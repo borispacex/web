@@ -1,6 +1,9 @@
 import { Footer } from './components/layout/Footer';
 import { Header } from './components/layout/Header';
 import { Hero } from './sections/hero/Hero';
+import { Projects } from './sections/projects/Projects';
+import { Services } from './sections/services/Services';
+import { ValueProposition } from './sections/value/ValueProposition';
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <ValueProposition />
+        <Services />
+        <Projects />
       </main>
       <Footer />
     </div>
