@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light;
+
+  --background: #f5f7fa;
+  --surface: #ffffff;
+  --surface-alt: #eef2f7;
+  --text-primary: #081426;
+  --text-secondary: #66758a;
+  --border: #d7dee8;
+  --primary: #1677ff;
+  --accent: #35b9ff;
+  --focus-ring: color-mix(in srgb, var(--primary) 70%, transparent);
+}
+
+:root.dark {
+  color-scheme: dark;
+
+  --background: #05070d;
+  --surface: #081426;
+  --surface-alt: #102a4c;
+  --text-primary: #f5f7fa;
+  --text-secondary: #8996a8;
+  --border: #1d3555;
+  --primary: #1677ff;
+  --accent: #35b9ff;
+}

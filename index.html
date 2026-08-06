@@ -1,10 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>web</title>
+    <meta
+      name="description"
+      content="BORISPACEX desarrolla sistemas, aplicaciones web y soluciones digitales."
+    />
+    <meta name="theme-color" content="#F5F7FA" />
+    <title>BORISPACEX · Full Stack Developer</title>
+    <script>
+      (() => {
+        const storageKey = 'borispacex-theme';
+        const storedTheme = localStorage.getItem(storageKey);
+        const theme = ['light', 'dark', 'system'].includes(storedTheme)
+          ? storedTheme
+          : 'system';
+        const isDark =
+          theme === 'dark' ||
+          (theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content = isDark
+          ? '#05070D'
+          : '#F5F7FA';
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
