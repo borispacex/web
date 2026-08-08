@@ -1,16 +1,16 @@
 .hero {
-  --hero-background: #05070d;
-  --hero-surface: #081426;
-  --hero-text: #f5f7fa;
-  --hero-muted: #8996a8;
-  --hero-border: #1d3555;
-  --hero-primary: #1677ff;
-  --hero-accent: #35b9ff;
+  --hero-background: var(--background);
+  --hero-surface: var(--surface);
+  --hero-text: var(--text-primary);
+  --hero-muted: var(--text-secondary);
+  --hero-border: var(--border);
+  --hero-primary: var(--primary);
+  --hero-accent: var(--accent);
 
   position: relative;
   background:
-    radial-gradient(circle at 50% 42%, rgb(22 119 255 / 18%), transparent 25rem),
-    radial-gradient(circle at 50% 110%, rgb(53 185 255 / 8%), transparent 38rem),
+    radial-gradient(circle at 50% 42%, rgb(22 119 255 / 16%), transparent 25rem),
+    radial-gradient(circle at 50% 110%, rgb(53 185 255 / 7%), transparent 38rem),
     var(--hero-background);
   color: var(--hero-text);
 }
@@ -22,8 +22,8 @@
     135deg,
     transparent 0,
     transparent 2.25rem,
-    rgb(137 150 168 / 5%) 2.25rem,
-    rgb(137 150 168 / 5%) calc(2.25rem + 1px)
+    color-mix(in srgb, var(--hero-muted) 7%, transparent) 2.25rem,
+    color-mix(in srgb, var(--hero-muted) 7%, transparent) calc(2.25rem + 1px)
   );
   mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
@@ -117,7 +117,7 @@
   width: 2.75rem;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgb(245 247 250 / 42%);
+  border: 1px solid color-mix(in srgb, var(--hero-text) 35%, transparent);
   border-radius: 50%;
   color: var(--hero-text);
   transform: translateX(-50%);
@@ -136,10 +136,14 @@
   width: clamp(4rem, 8vw, 7rem);
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgb(53 185 255 / 18%);
+  border: 1px solid color-mix(in srgb, var(--hero-accent) 22%, transparent);
   border-radius: 28% 42% 34% 48%;
-  background: linear-gradient(145deg, rgb(16 42 76 / 82%), rgb(8 20 38 / 50%));
-  color: rgb(53 185 255 / 45%);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--hero-surface) 88%, var(--hero-primary) 12%),
+    color-mix(in srgb, var(--hero-surface) 75%, transparent)
+  );
+  color: color-mix(in srgb, var(--hero-accent) 55%, transparent);
   filter: blur(0.2px);
   transform: rotate(var(--object-rotation));
 }
