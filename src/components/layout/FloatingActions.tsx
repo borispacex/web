@@ -34,7 +34,7 @@ export function FloatingActions() {
       )}
       <a
         aria-label={t('floating.whatsapp')}
-        className="group fixed bottom-4 left-4 z-40 flex min-h-12 items-center gap-3 rounded-full bg-void px-3 text-moon shadow-xl transition-transform hover:-translate-y-1 sm:bottom-6 sm:left-6 sm:px-5"
+        className="group fixed bottom-4 left-4 z-40 flex min-h-12 items-center gap-3 rounded-full border border-border bg-surface/90 px-3 text-foreground shadow-xl backdrop-blur-xl transition-[border-color,transform,background-color] hover:-translate-y-1 hover:border-primary/40 hover:bg-background sm:bottom-6 sm:left-6 sm:px-5"
         href="https://wa.me/59160514138"
         rel="noreferrer"
         target="_blank"
