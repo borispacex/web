@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { brandAssets } from '../../config/brand';
 import { Container } from '../ui/Container';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import { ThemeSelector } from '../ui/ThemeSelector';
@@ -41,10 +42,7 @@ export function Header() {
           href="#inicio"
           onClick={closeMenu}
         >
-          <span
-            aria-hidden="true"
-            className="size-2.5 rounded-full bg-primary shadow-[0_0_1rem_var(--primary)] transition-transform group-hover:scale-125"
-          />
+          <img alt="" aria-hidden="true" className="size-9 transition-transform group-hover:scale-105" src={brandAssets.symbol} />
           <span>{t('app.name')}</span>
         </a>
 

@@ -2,6 +2,7 @@ import { Braces, ChevronDown, Code2, Terminal } from 'lucide-react';
 import { m, useReducedMotion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { Container } from '../../components/ui/Container';
+import { brandAssets } from '../../config/brand';
 import './hero.css';
 
 export function Hero() {
@@ -34,10 +35,7 @@ export function Hero() {
           initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.75, ease: 'easeOut' }}
         >
-          <span className="hero__moon" />
-          <span className="hero__orbit hero__orbit--one" />
-          <span className="hero__orbit hero__orbit--two" />
-          <span className="hero__orbital-node" />
+          <img className="hero__logo-symbol" src={brandAssets.symbol} alt="" />
         </m.div>
 
         <m.div

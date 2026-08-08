@@ -1,4 +1,5 @@
 import { Footer } from './components/layout/Footer';
+import { FloatingActions } from './components/layout/FloatingActions';
 import { Header } from './components/layout/Header';
 import { About } from './sections/about/About';
 import { Capabilities } from './sections/capabilities/Capabilities';
@@ -30,6 +31,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <FloatingActions />
       </div>
     </LazyMotion>
   );

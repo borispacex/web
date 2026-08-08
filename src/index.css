@@ -5,6 +5,7 @@
 
 @theme inline {
   --color-void: var(--brand-void);
+  --color-deep: var(--brand-deep);
   --color-moon: var(--brand-moon);
   --color-background: var(--background);
   --color-surface: var(--surface);
@@ -90,5 +91,12 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .skip-link,
+  .floating-actions {
+    display: none !important;
   }
 }

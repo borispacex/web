@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" role="img" aria-labelledby="title">
+  <title id="title">BORISPACEX</title>
+  <g transform="translate(4 -1) scale(.63)">
+    <path d="M36 177A105 105 0 0 1 214 53" fill="none" stroke="#1677FF" stroke-linecap="round" stroke-width="10"/>
+    <circle cx="128" cy="88" r="47" fill="#F5F7FA" stroke="#F5F7FA" stroke-width="8"/><circle cx="128" cy="88" r="34" fill="#081426"/>
+    <path d="M82 177v-20c0-30 20-49 46-49s46 19 46 49v20" fill="#F5F7FA" stroke="#F5F7FA" stroke-width="8"/>
+    <path d="M67 157h122l-9 67H76z" fill="#081426" stroke="#F5F7FA" stroke-width="5"/><path d="M61 224h134" stroke="#F5F7FA" stroke-linecap="round" stroke-width="8"/>
+    <text x="101" y="204" fill="#F5F7FA" font-family="Arial,sans-serif" font-size="58" font-weight="800">B</text><text x="139" y="204" fill="#1677FF" font-family="Arial,sans-serif" font-size="58" font-weight="800">X</text>
+  </g>
+  <path d="M181 32v96" stroke="#1D3555" stroke-width="2"/>
+  <text x="218" y="99" fill="#F5F7FA" font-family="Arial,sans-serif" font-size="52" font-weight="700" letter-spacing="8">BORISPACEX</text>
+</svg>

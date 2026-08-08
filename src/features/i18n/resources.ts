@@ -118,6 +118,8 @@ export const resources = {
           description:
             'Proyecto orientado a digitalizar y organizar la operación de una ferretería. El alcance y las funciones se documentarán a medida que avance el desarrollo.',
           note: 'Caso de estudio en construcción. No se presentan todavía resultados ni funcionalidades como definitivas.',
+          cta: 'Conversemos sobre una solución similar',
+          visualLabel: 'Visualización conceptual',
         },
       },
       capabilities: {
@@ -156,6 +158,7 @@ export const resources = {
       about: {
         eyebrow: 'Sobre BORISPACEX',
         role: 'Full Stack Developer · Freelance',
+        orbitLabel: 'Explorar / construir',
         title: 'Construyendo soluciones, explorando posibilidades.',
         description:
           'BORISPACEX es una práctica independiente de desarrollo orientada a transformar necesidades en sistemas y productos digitales claros.',
@@ -200,6 +203,15 @@ export const resources = {
       },
       footer: {
         copyright: '© {{year}} BORISPACEX. Todos los derechos reservados.',
+        description:
+          'Desarrollo de sistemas, aplicaciones web y soluciones digitales.',
+        navigation: 'Navegación',
+        social: 'Redes profesionales',
+        location: 'Full Stack Developer · Freelance',
+      },
+      floating: {
+        whatsapp: 'Contactar a BORISPACEX mediante WhatsApp',
+        whatsappShort: 'WhatsApp',
         backToTop: 'Volver arriba',
       },
     },
@@ -323,6 +335,8 @@ export const resources = {
           description:
             'A project focused on digitizing and organizing the operation of a hardware store. Scope and features will be documented as development progresses.',
           note: 'Case study in progress. Results and features are not presented as final yet.',
+          cta: 'Discuss a similar solution',
+          visualLabel: 'Concept visualization',
         },
       },
       capabilities: {
@@ -361,6 +375,7 @@ export const resources = {
       about: {
         eyebrow: 'About BORISPACEX',
         role: 'Full Stack Developer · Freelance',
+        orbitLabel: 'Explore / build',
         title: 'Building solutions, exploring possibilities.',
         description:
           'BORISPACEX is an independent development practice focused on turning needs into clear digital systems and products.',
@@ -405,6 +420,15 @@ export const resources = {
       },
       footer: {
         copyright: '© {{year}} BORISPACEX. All rights reserved.',
+        description:
+          'Software systems, web applications and digital solutions.',
+        navigation: 'Navigation',
+        social: 'Professional networks',
+        location: 'Full Stack Developer · Freelance',
+      },
+      floating: {
+        whatsapp: 'Contact BORISPACEX through WhatsApp',
+        whatsappShort: 'WhatsApp',
         backToTop: 'Back to top',
       },
     },
