@@ -1,13 +1,23 @@
-import { BriefcaseBusiness, GitBranch } from 'lucide-react';
+import { BriefcaseBusiness, GitBranch, Mail, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { brandAssets } from '../../config/brand';
 import { Container } from '../ui/Container';
 
-const footerNavigation = [
-  { href: '#inicio', translationKey: 'navigation.home' },
-  { href: '#servicios', translationKey: 'navigation.services' },
-  { href: '#proyectos', translationKey: 'navigation.projects' },
-  { href: '#contacto', translationKey: 'navigation.contact' },
+const contactLinks = [
+  {
+    href: 'https://wa.me/59160514138',
+    icon: MessageCircle,
+    labelKey: 'contact.channels.whatsapp',
+    value: '+591 60514138',
+    external: true,
+  },
+  {
+    href: 'mailto:borispacex@gmail.com',
+    icon: Mail,
+    labelKey: 'contact.channels.email',
+    value: 'borispacex@gmail.com',
+    external: false,
+  },
 ] as const;
 
 const socialLinks = [
@@ -28,62 +38,57 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-void text-moon">
-      <Container className="py-14 sm:py-20">
-        <div className="grid gap-12 border-b border-white/10 pb-14 md:grid-cols-[1.4fr_0.6fr_0.6fr]">
+    <footer className="border-t border-white/10 bg-void text-moon">
+      <Container className="py-8 sm:py-10">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(12rem,0.8fr)_minmax(32rem,1.5fr)_auto]">
           <div>
-            <a className="inline-flex items-center gap-3 font-bold tracking-[0.18em]" href="#inicio">
-              <img alt="" aria-hidden="true" className="size-10" src={brandAssets.symbol} />
+            <a className="inline-flex items-center gap-3 font-bold tracking-[0.16em]" href="#inicio">
+              <img alt="" aria-hidden="true" className="size-11" src={brandAssets.symbol} />
               {t('app.name')}
             </a>
-            <p className="mt-5 max-w-sm text-sm leading-7 text-moon/65">
-              {t('footer.description')}
-            </p>
-            <p className="mt-6 font-mono text-[0.65rem] tracking-[0.16em] text-moon/60 uppercase">
-              {t('hero.manifesto')}
+            <p className="mt-2 text-xs text-moon/55">
+              {t('footer.copyright', { year: currentYear })}
             </p>
           </div>
 
-          <nav aria-label={t('footer.navigation')}>
-            <p className="text-xs font-semibold tracking-[0.16em] text-moon/60 uppercase">
-              {t('footer.navigation')}
-            </p>
-            <ul className="mt-5 grid gap-3">
-              {footerNavigation.map((item) => (
-                <li key={item.href}>
-                  <a className="text-sm text-moon/70 transition-colors hover:text-moon" href={item.href}>
-                    {t(item.translationKey)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <address className="grid gap-3 not-italic sm:grid-cols-2">
+            {contactLinks.map(({ external, href, icon: Icon, labelKey, value }) => (
+              <a
+                className="group flex min-h-16 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.035] px-4 transition-colors hover:border-accent/45 hover:bg-white/[0.06]"
+                href={href}
+                key={href}
+                rel={external ? 'noreferrer' : undefined}
+                target={external ? '_blank' : undefined}
+              >
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/15 text-accent">
+                  <Icon aria-hidden="true" className="size-4" strokeWidth={1.7} />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-[0.65rem] text-moon/50">{t(labelKey)}</span>
+                  <span className="block truncate text-sm font-semibold text-moon/85">{value}</span>
+                  {external && (
+                    <span className="sr-only"> {t('accessibility.opensNewTab')}</span>
+                  )}
+                </span>
+              </a>
+            ))}
+          </address>
 
-          <div>
-            <p className="text-xs font-semibold tracking-[0.16em] text-moon/60 uppercase">
-              {t('footer.social')}
-            </p>
-            <div className="mt-5 flex gap-3">
-              {socialLinks.map(({ href, icon: Icon, labelKey }) => (
-                <a
-                  aria-label={t(labelKey)}
-                  className="grid size-11 place-items-center rounded-full border border-white/20 text-moon/70 transition-colors hover:border-accent hover:text-accent"
-                  href={href}
-                  key={href}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <Icon aria-hidden="true" className="size-5" strokeWidth={1.6} />
-                  <span className="sr-only">{t('accessibility.opensNewTab')}</span>
-                </a>
-              ))}
-            </div>
+          <div className="flex items-center gap-3 lg:justify-end">
+            {socialLinks.map(({ href, icon: Icon, labelKey }) => (
+              <a
+                aria-label={t(labelKey)}
+                className="grid size-11 place-items-center rounded-full border border-white/15 text-moon/65 transition-colors hover:border-accent hover:text-accent"
+                href={href}
+                key={href}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <Icon aria-hidden="true" className="size-5" strokeWidth={1.6} />
+                <span className="sr-only"> {t('accessibility.opensNewTab')}</span>
+              </a>
+            ))}
           </div>
-        </div>
-
-        <div className="flex flex-col gap-3 pt-7 text-xs text-moon/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>{t('footer.copyright', { year: currentYear })}</p>
-          <p>{t('footer.location')}</p>
         </div>
       </Container>
     </footer>

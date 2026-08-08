@@ -121,78 +121,22 @@ export const resources = {
           visualLabel: 'Visualización conceptual',
         },
       },
-      capabilities: {
-        eyebrow: 'Capacidades',
-        title: 'Tecnología al servicio del producto.',
-        description:
-          'Una visión full stack para conectar experiencia, lógica, datos y entrega en una solución consistente.',
-        systemLabel: 'BORISPACEX / sistema de capacidades',
-        items: {
-          interfaces: {
-            title: 'Interfaces responsive',
-            description: 'Experiencias accesibles que funcionan con claridad en cada pantalla.',
-          },
-          applications: {
-            title: 'Aplicaciones web',
-            description: 'Productos interactivos con una base modular y mantenible.',
-          },
-          services: {
-            title: 'Servicios y APIs',
-            description: 'Lógica de negocio e integraciones conectadas de forma segura.',
-          },
-          data: {
-            title: 'Datos',
-            description: 'Información organizada para consultas, procesos y decisiones confiables.',
-          },
-          automation: {
-            title: 'Flujos automatizados',
-            description: 'Menos trabajo repetitivo y operaciones digitales más eficientes.',
-          },
-          delivery: {
-            title: 'Entrega continua',
-            description: 'Código validado y preparado para evolucionar con control.',
-          },
-        },
-      },
-      about: {
-        eyebrow: 'Sobre BORISPACEX',
-        role: 'Full Stack Developer · Freelance',
-        orbitLabel: 'Explorar / construir',
-        title: 'Construyendo soluciones, explorando posibilidades.',
-        description:
-          'BORISPACEX es una práctica independiente de desarrollo orientada a transformar necesidades en sistemas y productos digitales claros.',
-        note:
-          'La experiencia detallada, trayectoria y colaboraciones se incorporarán cuando estén disponibles los datos profesionales definitivos.',
-      },
-      process: {
-        eyebrow: 'Proceso',
-        title: 'Del contexto a una solución desplegada.',
-        description:
-          'Un proceso directo, visible y adaptable para reducir incertidumbre y mantener el proyecto enfocado.',
-        steps: {
-          discover: {
-            title: 'Explorar',
-            description: 'Entender el problema, el contexto, las personas y los objetivos.',
-          },
-          define: {
-            title: 'Definir',
-            description: 'Acordar alcance, prioridades, solución y criterios de éxito.',
-          },
-          build: {
-            title: 'Construir',
-            description: 'Desarrollar por avances verificables con comunicación continua.',
-          },
-          deliver: {
-            title: 'Desplegar',
-            description: 'Validar, entregar y preparar la solución para su siguiente etapa.',
-          },
-        },
-      },
       contact: {
         eyebrow: 'Contacto',
-        title: 'Construyamos tu próxima solución.',
-        description:
-          'Cuéntame qué necesitas resolver y conversemos sobre el alcance, las prioridades y el siguiente paso.',
+        title: 'Hablemos de tu proyecto.',
+        description: 'Canales oficiales para conversar sobre tu idea, consulta o propuesta.',
+        methods: {
+          whatsapp: {
+            title: 'WhatsApp',
+            description: 'Envía un mensaje directo para iniciar una conversación rápida.',
+            action: 'Enviar mensaje',
+          },
+          email: {
+            title: 'Correo electrónico',
+            description: 'Escribe para consultas detalladas, requisitos o propuestas de proyecto.',
+            action: 'Escribir correo',
+          },
+        },
         channels: {
           email: 'Correo electrónico',
           github: 'GitHub',
@@ -202,11 +146,6 @@ export const resources = {
       },
       footer: {
         copyright: '© {{year}} BORISPACEX. Todos los derechos reservados.',
-        description:
-          'Desarrollo de sistemas, aplicaciones web y soluciones digitales.',
-        navigation: 'Navegación',
-        social: 'Redes profesionales',
-        location: 'Full Stack Developer · Freelance',
       },
       floating: {
         whatsapp: 'Contactar a BORISPACEX mediante WhatsApp',
@@ -337,78 +276,22 @@ export const resources = {
           visualLabel: 'Concept visualization',
         },
       },
-      capabilities: {
-        eyebrow: 'Capabilities',
-        title: 'Technology serving the product.',
-        description:
-          'A full-stack perspective connecting experience, logic, data and delivery in one consistent solution.',
-        systemLabel: 'BORISPACEX / capability system',
-        items: {
-          interfaces: {
-            title: 'Responsive interfaces',
-            description: 'Accessible experiences that work clearly across every screen.',
-          },
-          applications: {
-            title: 'Web applications',
-            description: 'Interactive products built on a modular, maintainable foundation.',
-          },
-          services: {
-            title: 'Services and APIs',
-            description: 'Business logic and integrations connected securely.',
-          },
-          data: {
-            title: 'Data',
-            description: 'Information structured for reliable queries, processes and decisions.',
-          },
-          automation: {
-            title: 'Automated workflows',
-            description: 'Less repetitive work and more efficient digital operations.',
-          },
-          delivery: {
-            title: 'Continuous delivery',
-            description: 'Validated code ready to evolve with control.',
-          },
-        },
-      },
-      about: {
-        eyebrow: 'About BORISPACEX',
-        role: 'Full Stack Developer · Freelance',
-        orbitLabel: 'Explore / build',
-        title: 'Building solutions, exploring possibilities.',
-        description:
-          'BORISPACEX is an independent development practice focused on turning needs into clear digital systems and products.',
-        note:
-          'Detailed experience, background and collaborations will be added once the final professional information is available.',
-      },
-      process: {
-        eyebrow: 'Process',
-        title: 'From context to a deployed solution.',
-        description:
-          'A direct, visible and adaptable process that reduces uncertainty and keeps the project focused.',
-        steps: {
-          discover: {
-            title: 'Discover',
-            description: 'Understand the problem, context, people and goals.',
-          },
-          define: {
-            title: 'Define',
-            description: 'Align scope, priorities, solution and success criteria.',
-          },
-          build: {
-            title: 'Build',
-            description: 'Develop through verifiable progress and continuous communication.',
-          },
-          deliver: {
-            title: 'Deploy',
-            description: 'Validate, deliver and prepare the solution for its next stage.',
-          },
-        },
-      },
       contact: {
         eyebrow: 'Contact',
-        title: "Let's build your next solution.",
-        description:
-          'Tell me what you need to solve and let us discuss scope, priorities and the next step.',
+        title: "Let's talk about your project.",
+        description: 'Official channels to discuss your idea, question or proposal.',
+        methods: {
+          whatsapp: {
+            title: 'WhatsApp',
+            description: 'Send a direct message to start a quick conversation.',
+            action: 'Send a message',
+          },
+          email: {
+            title: 'Email',
+            description: 'Write with detailed questions, requirements or project proposals.',
+            action: 'Write an email',
+          },
+        },
         channels: {
           email: 'Email',
           github: 'GitHub',
@@ -418,11 +301,6 @@ export const resources = {
       },
       footer: {
         copyright: '© {{year}} BORISPACEX. All rights reserved.',
-        description:
-          'Software systems, web applications and digital solutions.',
-        navigation: 'Navigation',
-        social: 'Professional networks',
-        location: 'Full Stack Developer · Freelance',
       },
       floating: {
         whatsapp: 'Contact BORISPACEX through WhatsApp',

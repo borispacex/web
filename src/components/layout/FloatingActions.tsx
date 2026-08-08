@@ -20,11 +20,11 @@ export function FloatingActions() {
   };
 
   return (
-    <div className="floating-actions fixed right-4 bottom-4 z-40 flex flex-col items-end gap-3 sm:right-6 sm:bottom-6">
+    <div className="floating-actions">
       {showBackToTop && (
         <button
           aria-label={t('floating.backToTop')}
-          className="grid size-12 place-items-center rounded-full border border-border bg-background/90 text-foreground shadow-lg backdrop-blur-xl transition-transform hover:-translate-y-1"
+          className="fixed right-4 bottom-4 z-40 grid size-12 place-items-center rounded-full border border-border bg-background/90 text-foreground shadow-lg backdrop-blur-xl transition-transform hover:-translate-y-1 sm:right-6 sm:bottom-6"
           onClick={scrollToTop}
           type="button"
         >
@@ -33,7 +33,7 @@ export function FloatingActions() {
       )}
       <a
         aria-label={t('floating.whatsapp')}
-        className="group flex min-h-12 items-center gap-3 rounded-full bg-void px-3 text-moon shadow-xl transition-transform hover:-translate-y-1 sm:px-5"
+        className="group fixed bottom-4 left-4 z-40 flex min-h-12 items-center gap-3 rounded-full bg-void px-3 text-moon shadow-xl transition-transform hover:-translate-y-1 sm:bottom-6 sm:left-6 sm:px-5"
         href="https://wa.me/59160514138"
         rel="noreferrer"
         target="_blank"

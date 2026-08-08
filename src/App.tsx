@@ -1,11 +1,8 @@
 import { Footer } from './components/layout/Footer';
 import { FloatingActions } from './components/layout/FloatingActions';
 import { Header } from './components/layout/Header';
-import { About } from './sections/about/About';
-import { Capabilities } from './sections/capabilities/Capabilities';
 import { Contact } from './sections/contact/Contact';
 import { Hero } from './sections/hero/Hero';
-import { Process } from './sections/process/Process';
 import { Projects } from './sections/projects/Projects';
 import { Services } from './sections/services/Services';
 import { ValueProposition } from './sections/value/ValueProposition';
@@ -25,10 +22,7 @@ function App() {
           <ValueProposition />
           <Services />
           <Projects />
-          <Capabilities />
-          <About />
-          <Process />
-          <Contact />
+        <Contact />
         </main>
         <Footer />
         <FloatingActions />
