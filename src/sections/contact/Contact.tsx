@@ -25,12 +25,12 @@ export function Contact() {
   return (
     <section
       aria-labelledby="contact-title"
-      className="border-t border-white/10 bg-void text-moon"
+      className="border-t border-border bg-background text-foreground"
       id="contacto"
     >
       <Container className="py-24 sm:py-32">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+          <p className="text-sm font-semibold tracking-[0.18em] text-primary uppercase">
             {t('contact.eyebrow')}
           </p>
           <h2
@@ -39,7 +39,7 @@ export function Contact() {
           >
             {t('contact.title')}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-moon/60">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
             {t('contact.description')}
           </p>
         </Reveal>
@@ -48,21 +48,21 @@ export function Contact() {
           {contactMethods.map(({ external, href, icon: Icon, key }) => (
             <Reveal className="h-full" key={key}>
               <a
-                className="group flex h-full min-h-64 flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/[0.035] p-8 text-center transition-[border-color,transform,background-color,box-shadow] hover:-translate-y-1 hover:border-accent/45 hover:bg-white/[0.06] hover:shadow-xl hover:shadow-primary/10"
+                className="group flex h-full min-h-64 flex-col items-center justify-center rounded-3xl border border-border bg-surface p-8 text-center transition-[border-color,transform,background-color,box-shadow] hover:-translate-y-1 hover:border-primary/50 hover:bg-surface-alt hover:shadow-xl hover:shadow-primary/10"
                 href={href}
                 rel={external ? 'noreferrer' : undefined}
                 target={external ? '_blank' : undefined}
               >
-                <span className="grid size-16 place-items-center rounded-2xl bg-primary/15 text-accent transition-colors group-hover:bg-primary group-hover:text-white">
+                <span className="grid size-16 place-items-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                   <Icon aria-hidden="true" className="size-7" strokeWidth={1.8} />
                 </span>
                 <h3 className="mt-7 text-2xl font-semibold">
                   {t(`contact.methods.${key}.title`)}
                 </h3>
-                <p className="mt-3 max-w-sm leading-7 text-moon/55">
+                <p className="mt-3 max-w-sm leading-7 text-muted-foreground">
                   {t(`contact.methods.${key}.description`)}
                 </p>
-                <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-accent">
+                <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                   {t(`contact.methods.${key}.action`)}
                   <ArrowUpRight aria-hidden="true" className="size-4" />
                 </span>

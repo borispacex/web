@@ -39,7 +39,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-void text-moon">
+    <footer className="border-t border-border bg-surface-alt text-foreground">
       <Container className="py-8 sm:py-10">
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(12rem,0.8fr)_minmax(32rem,1.5fr)_auto]">
           <div>
@@ -47,7 +47,7 @@ export function Footer() {
               <img alt="" aria-hidden="true" className="size-11" src={brandAssets.symbol} />
               {t('app.name')}
             </a>
-            <p className="mt-2 text-xs text-moon/55">
+            <p className="mt-2 text-xs text-muted-foreground">
               {t('footer.copyright', { year: currentYear })}
             </p>
           </div>
@@ -55,18 +55,18 @@ export function Footer() {
           <address className="grid gap-3 not-italic sm:grid-cols-2">
             {contactLinks.map(({ external, href, icon: Icon, labelKey, value }) => (
               <a
-                className="group flex min-h-16 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.035] px-4 transition-colors hover:border-accent/45 hover:bg-white/[0.06]"
+                className="group flex min-h-16 items-center gap-4 rounded-2xl border border-border bg-surface px-4 transition-colors hover:border-primary/45 hover:bg-background"
                 href={href}
                 key={href}
                 rel={external ? 'noreferrer' : undefined}
                 target={external ? '_blank' : undefined}
               >
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/15 text-accent">
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
                   <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-[0.65rem] text-moon/50">{t(labelKey)}</span>
-                  <span className="block truncate text-sm font-semibold text-moon/85">{value}</span>
+                  <span className="block text-[0.65rem] text-muted-foreground">{t(labelKey)}</span>
+                  <span className="block truncate text-sm font-semibold text-foreground">{value}</span>
                   {external && (
                     <span className="sr-only"> {t('accessibility.opensNewTab')}</span>
                   )}
@@ -79,7 +79,7 @@ export function Footer() {
             {socialLinks.map(({ href, icon: Icon, labelKey }) => (
               <a
                 aria-label={t(labelKey)}
-                className="grid size-11 place-items-center rounded-full border border-white/15 text-moon/65 transition-colors hover:border-accent hover:text-accent"
+                className="grid size-11 place-items-center rounded-full border border-border bg-surface text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                 href={href}
                 key={href}
                 rel="noreferrer"
