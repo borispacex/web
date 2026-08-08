@@ -9,6 +9,7 @@ export const resources = {
       },
       accessibility: {
         skipToContent: 'Saltar al contenido principal',
+        opensNewTab: '(abre en una pestaña nueva)',
       },
       navigation: {
         primary: 'Navegación principal',
@@ -106,10 +107,13 @@ export const resources = {
         title: 'Trabajo seleccionado, explicado con claridad.',
         description:
           'Esta sección mostrará el problema, la solución y el impacto de proyectos reales.',
-        pending: {
-          title: 'Casos de estudio en preparación',
+        hardwareStore: {
+          status: 'En desarrollo',
+          category: 'Sistema empresarial',
+          title: 'Sistema para ferretería',
           description:
-            'Los proyectos se publicarán cuando estén disponibles sus datos, recursos y permisos de presentación.',
+            'Proyecto orientado a digitalizar y organizar la operación de una ferretería. El alcance y las funciones se documentarán a medida que avance el desarrollo.',
+          note: 'Caso de estudio en construcción. No se presentan todavía resultados ni funcionalidades como definitivas.',
         },
       },
       capabilities: {
@@ -182,10 +186,11 @@ export const resources = {
         title: 'Construyamos tu próxima solución.',
         description:
           'Cuéntame qué necesitas resolver y conversemos sobre el alcance, las prioridades y el siguiente paso.',
-        pending: {
-          title: 'Canal de contacto pendiente',
-          description:
-            'Añadiremos aquí el correo y los enlaces oficiales cuando sean proporcionados.',
+        channels: {
+          email: 'Correo electrónico',
+          github: 'GitHub',
+          linkedin: 'LinkedIn',
+          whatsapp: 'WhatsApp',
         },
       },
       footer: {
@@ -204,6 +209,7 @@ export const resources = {
       },
       accessibility: {
         skipToContent: 'Skip to main content',
+        opensNewTab: '(opens in a new tab)',
       },
       navigation: {
         primary: 'Primary navigation',
@@ -301,10 +307,13 @@ export const resources = {
         title: 'Selected work, explained clearly.',
         description:
           'This section will present the problem, solution and impact of real projects.',
-        pending: {
-          title: 'Case studies in progress',
+        hardwareStore: {
+          status: 'In development',
+          category: 'Business system',
+          title: 'Hardware store system',
           description:
-            'Projects will be published once their details, assets and presentation permissions are available.',
+            'A project focused on digitizing and organizing the operation of a hardware store. Scope and features will be documented as development progresses.',
+          note: 'Case study in progress. Results and features are not presented as final yet.',
         },
       },
       capabilities: {
@@ -377,10 +386,11 @@ export const resources = {
         title: "Let's build your next solution.",
         description:
           'Tell me what you need to solve and let us discuss scope, priorities and the next step.',
-        pending: {
-          title: 'Contact channel pending',
-          description:
-            'The official email address and links will be added here once provided.',
+        channels: {
+          email: 'Email',
+          github: 'GitHub',
+          linkedin: 'LinkedIn',
+          whatsapp: 'WhatsApp',
         },
       },
       footer: {
