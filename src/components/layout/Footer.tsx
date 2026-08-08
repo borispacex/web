@@ -55,7 +55,7 @@ export function Footer() {
           <address className="grid gap-3 not-italic sm:grid-cols-2">
             {contactLinks.map(({ external, href, icon: Icon, labelKey, value }) => (
               <a
-                className="group flex min-h-16 items-center gap-4 rounded-2xl border border-border bg-surface px-4 transition-colors hover:border-primary/45 hover:bg-background"
+                className="group flex min-h-16 items-center gap-4 rounded-2xl border border-border bg-surface px-4 transition-colors hover:border-primary/45 hover:bg-surface-alt"
                 href={href}
                 key={href}
                 rel={external ? 'noreferrer' : undefined}
@@ -79,7 +79,7 @@ export function Footer() {
             {socialLinks.map(({ href, icon: Icon, labelKey }) => (
               <a
                 aria-label={t(labelKey)}
-                className="grid size-11 place-items-center rounded-full border border-border bg-surface text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="grid size-11 place-items-center rounded-full border border-border bg-surface text-muted-foreground transition-colors hover:border-primary hover:bg-surface-alt hover:text-primary"
                 href={href}
                 key={href}
                 rel="noreferrer"

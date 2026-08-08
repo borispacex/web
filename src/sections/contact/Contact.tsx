@@ -25,7 +25,7 @@ export function Contact() {
   return (
     <section
       aria-labelledby="contact-title"
-      className="border-t border-border bg-background text-foreground"
+      className="border-t border-primary/10 bg-[var(--section-tint)] text-foreground"
       id="contacto"
     >
       <Container className="py-24 sm:py-32">

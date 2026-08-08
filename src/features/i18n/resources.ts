@@ -127,6 +127,17 @@ export const resources = {
           visualLabel: 'Visualización conceptual',
         },
       },
+      growth: {
+        eyebrow: 'Soluciones para crecer',
+        title: 'Impulsando el crecimiento de cada cliente',
+        sectors: {
+          commerce: 'Comercios',
+          services: 'Empresas de servicios',
+          startups: 'Emprendimientos',
+          organizations: 'Organizaciones',
+          professionals: 'Profesionales',
+        },
+      },
       contact: {
         eyebrow: 'Contacto',
         title: 'Hablemos de tu proyecto.',
@@ -286,6 +297,17 @@ export const resources = {
           note: 'Case study in progress. Results and features are not presented as final yet.',
           cta: 'Discuss a similar solution',
           visualLabel: 'Concept visualization',
+        },
+      },
+      growth: {
+        eyebrow: 'Solutions for growth',
+        title: 'Helping every client move forward',
+        sectors: {
+          commerce: 'Retail businesses',
+          services: 'Service companies',
+          startups: 'Startups',
+          organizations: 'Organizations',
+          professionals: 'Professionals',
         },
       },
       contact: {
