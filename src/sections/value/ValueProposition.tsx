@@ -1,4 +1,4 @@
-import { Compass, Crosshair, Layers3 } from 'lucide-react';
+import { Braces, Compass, Crosshair, Gauge, Layers3, MessagesSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Container } from '../../components/ui/Container';
 import { Reveal } from '../../components/ui/Reveal';
@@ -6,6 +6,9 @@ import { Reveal } from '../../components/ui/Reveal';
 const values = [
   { icon: Crosshair, key: 'purpose' },
   { icon: Layers3, key: 'systems' },
+  { icon: Gauge, key: 'scalability' },
+  { icon: Braces, key: 'adaptability' },
+  { icon: MessagesSquare, key: 'communication' },
   { icon: Compass, key: 'partnership' },
 ] as const;
 
@@ -13,38 +16,36 @@ export function ValueProposition() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="value-title" className="border-b border-border bg-background" id="propuesta">
-      <Container className="grid gap-14 py-24 sm:py-32 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-24">
-        <Reveal className="lg:sticky lg:top-32">
-          <p className="text-sm font-semibold tracking-[0.18em] text-primary uppercase">
+    <section aria-labelledby="value-title" className="border-b border-border bg-surface-alt" id="propuesta">
+      <Container className="py-24 sm:py-32">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
             {t('value.eyebrow')}
           </p>
           <h2
-            className="mt-6 max-w-4xl text-[clamp(2.5rem,5.5vw,5.5rem)] leading-[1.02] font-semibold tracking-[-0.055em] text-balance"
+            className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-tight font-semibold tracking-[-0.04em] text-balance"
             id="value-title"
           >
             {t('value.statement')}
           </h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-muted-foreground">
+            {t('value.description')}
+          </p>
         </Reveal>
 
-        <div className="divide-y divide-border border-y border-border">
-          {values.map(({ icon: Icon, key }, index) => (
-            <Reveal key={key}>
-              <article className="group grid grid-cols-[auto_1fr] gap-x-5 py-8 sm:py-10">
-                <div className="grid size-12 place-items-center rounded-full border border-border bg-surface text-primary transition-colors group-hover:border-primary">
-                  <Icon aria-hidden="true" className="size-5" strokeWidth={1.7} />
+        <div className="mx-auto mt-14 grid max-w-5xl gap-4 lg:grid-cols-2">
+          {values.map(({ icon: Icon, key }) => (
+            <Reveal className="h-full" key={key}>
+              <article className="group flex h-full min-h-48 flex-col items-center justify-center rounded-[1.25rem] border border-border bg-surface px-6 py-9 text-center transition-[border-color,transform] hover:-translate-y-1 hover:border-primary/40 sm:px-10">
+                <div className="grid size-11 place-items-center rounded-xl bg-foreground text-background">
+                  <Icon aria-hidden="true" className="size-6" strokeWidth={1.8} />
                 </div>
-                <div>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-xl font-semibold">{t(`value.items.${key}.title`)}</h3>
-                    <span className="font-mono text-xs text-muted-foreground">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </div>
-                  <p className="mt-3 leading-7 text-muted-foreground">
-                    {t(`value.items.${key}.description`)}
-                  </p>
-                </div>
+                <p className="mt-5 max-w-xl leading-7 text-muted-foreground">
+                  <strong className="font-semibold text-foreground">
+                    {t(`value.items.${key}.title`)}:
+                  </strong>{' '}
+                  {t(`value.items.${key}.description`)}
+                </p>
               </article>
             </Reveal>
           ))}

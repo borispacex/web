@@ -1,105 +1,53 @@
-import { ArrowUpRight, Building2, Code2, Database, PanelsTopLeft, ServerCog, Workflow } from 'lucide-react';
+import { Building2, PanelsTopLeft, ServerCog, Workflow } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '../../components/ui/Button';
 import { Container } from '../../components/ui/Container';
 import { Reveal } from '../../components/ui/Reveal';
-import { SectionHeading } from '../../components/ui/SectionHeading';
 
 const services = [
-  {
-    icon: PanelsTopLeft,
-    key: 'web',
-    layout: 'lg:col-span-7 lg:min-h-80',
-    theme: 'bg-primary-strong text-white',
-    muted: 'text-white/75',
-  },
-  {
-    icon: Building2,
-    key: 'business',
-    layout: 'lg:col-span-5 lg:min-h-80',
-    theme: 'bg-void text-moon',
-    muted: 'text-moon/65',
-  },
-  {
-    icon: Code2,
-    key: 'frontend',
-    layout: 'lg:col-span-3',
-    theme: 'bg-surface text-foreground',
-    muted: 'text-muted-foreground',
-  },
-  {
-    icon: ServerCog,
-    key: 'backend',
-    layout: 'lg:col-span-3',
-    theme: 'bg-surface text-foreground',
-    muted: 'text-muted-foreground',
-  },
-  {
-    icon: Database,
-    key: 'data',
-    layout: 'lg:col-span-3',
-    theme: 'bg-surface text-foreground',
-    muted: 'text-muted-foreground',
-  },
-  {
-    icon: Workflow,
-    key: 'automation',
-    layout: 'lg:col-span-3',
-    theme: 'bg-surface text-foreground',
-    muted: 'text-muted-foreground',
-  },
+  { icon: PanelsTopLeft, key: 'web' },
+  { icon: Building2, key: 'business' },
+  { icon: ServerCog, key: 'backend' },
+  { icon: Workflow, key: 'automation' },
 ] as const;
 
 export function Services() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="services-title" className="bg-surface-alt" id="servicios">
-      <Container className="py-24 sm:py-32">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <Reveal>
-            <SectionHeading
-              description={t('services.description')}
-              eyebrow={t('services.eyebrow')}
-              id="services-title"
-              title={t('services.title')}
-            />
-          </Reveal>
-          <Reveal>
-            <a
-              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border bg-background px-5 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5"
-              href="#contacto"
-            >
-              {t('services.cta')}
-              <ArrowUpRight aria-hidden="true" className="size-4" />
-            </a>
-          </Reveal>
-        </div>
+    <section aria-labelledby="services-title" className="bg-background" id="servicios">
+      <Container className="grid gap-14 py-24 sm:py-32 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20">
+        <Reveal className="max-w-2xl">
+          <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
+            {t('services.eyebrow')}
+          </p>
+          <h2
+            className="mt-6 max-w-xl text-[clamp(2.75rem,5vw,4.5rem)] leading-[0.96] font-semibold tracking-[-0.055em] text-balance"
+            id="services-title"
+          >
+            {t('services.title')}
+          </h2>
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9">
+            {t('services.description')}
+          </p>
+          <Button
+            className="mt-9 bg-foreground px-6 text-background hover:opacity-85 hover:brightness-100"
+            href="#contacto"
+          >
+            {t('services.cta')}
+          </Button>
+        </Reveal>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-12">
-          {services.map(({ icon: Icon, key, layout, muted, theme }, index) => (
-            <Reveal className={`h-full ${layout}`} key={key}>
-              <article className={`group relative flex h-full min-h-64 flex-col overflow-hidden rounded-3xl border border-border/70 p-7 sm:p-8 ${theme}`}>
-                <Icon
-                  aria-hidden="true"
-                  className="absolute -right-6 -bottom-6 size-40 opacity-[0.07] transition-transform duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"
-                  strokeWidth={1.2}
-                />
-                <div className="relative flex items-start justify-between gap-5">
-                  <div className="grid size-12 place-items-center rounded-2xl border border-current/15 bg-white/5">
-                    <Icon aria-hidden="true" className="size-6" strokeWidth={1.6} />
-                  </div>
-                  <span className={`font-mono text-xs ${muted}`}>
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                </div>
-                <div className="relative mt-auto pt-14">
-                  <h3 className="max-w-sm text-2xl font-semibold tracking-tight">
-                    {t(`services.items.${key}.title`)}
-                  </h3>
-                  <p className={`mt-3 max-w-lg leading-7 ${muted}`}>
-                    {t(`services.items.${key}.description`)}
-                  </p>
-                </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {services.map(({ icon: Icon, key }) => (
+            <Reveal className="h-full" key={key}>
+              <article className="group flex h-full min-h-44 flex-col items-center justify-center rounded-[1.5rem] border border-border bg-surface px-5 py-8 text-center transition-[border-color,transform,background-color] hover:-translate-y-1 hover:border-primary/40 hover:bg-surface-alt lg:aspect-[1.16/1] lg:min-h-0">
+                <span className="grid size-12 place-items-center text-foreground transition-colors group-hover:text-primary">
+                  <Icon aria-hidden="true" className="size-8" strokeWidth={1.9} />
+                </span>
+                <h3 className="mt-5 max-w-40 text-sm font-semibold leading-5">
+                  {t(`services.items.${key}.title`)}
+                </h3>
               </article>
             </Reveal>
           ))}

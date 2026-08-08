@@ -45,9 +45,10 @@ export const resources = {
         scrollLabel: 'Explorar la propuesta de valor',
       },
       value: {
-        eyebrow: 'Nuestra forma de construir',
-        statement:
-          'Software pensado para resolver, crecer contigo y convertir una idea en una solución que funciona.',
+        eyebrow: 'Características',
+        statement: 'Tecnología construida para avanzar',
+        description:
+          'Soluciones digitales pensadas para resolver necesidades reales, mantenerse claras y evolucionar con cada proyecto.',
         items: {
           purpose: {
             title: 'Enfoque en el problema',
@@ -59,6 +60,21 @@ export const resources = {
             description:
               'Frontend, backend y datos trabajan como una solución coherente, mantenible y preparada para evolucionar.',
           },
+          scalability: {
+            title: 'Preparado para crecer',
+            description:
+              'una base ordenada que permite ampliar funciones sin rehacer el producto desde cero.',
+          },
+          adaptability: {
+            title: 'Tecnología adaptable',
+            description:
+              'las herramientas se eligen según el proyecto y no por seguir una solución única.',
+          },
+          communication: {
+            title: 'Avances transparentes',
+            description:
+              'comunicación directa para conocer el estado del trabajo y tomar decisiones a tiempo.',
+          },
           partnership: {
             title: 'Proceso cercano',
             description:
@@ -67,11 +83,11 @@ export const resources = {
         },
       },
       services: {
-        eyebrow: 'Servicios',
-        title: 'Soluciones digitales de principio a fin.',
+        eyebrow: 'Capacidades',
+        title: 'Servicios tecnológicos',
         description:
-          'Diseño y desarrollo software adaptado al contexto, los objetivos y la operación de cada proyecto.',
-        cta: 'Solicitar una propuesta',
+          'Impulso la transformación digital de negocios con soluciones a medida, escalables y claras. Tecnología elegida para convertir necesidades complejas en herramientas útiles.',
+        cta: 'Más información',
         items: {
           web: {
             title: 'Sistemas web',
@@ -83,20 +99,10 @@ export const resources = {
             description:
               'Herramientas que organizan procesos, centralizan información y apoyan la operación diaria.',
           },
-          frontend: {
-            title: 'Frontend y experiencias web',
-            description:
-              'Interfaces claras, responsive y cuidadas para convertir requisitos en experiencias útiles.',
-          },
           backend: {
-            title: 'Backend y APIs',
+            title: 'Backend e integraciones',
             description:
               'Servicios robustos e integraciones que conectan productos, plataformas y flujos de trabajo.',
-          },
-          data: {
-            title: 'Bases de datos',
-            description:
-              'Modelado y gestión de datos con una estructura consistente, segura y fácil de mantener.',
           },
           automation: {
             title: 'Automatización',
@@ -200,9 +206,10 @@ export const resources = {
         scrollLabel: 'Explore the value proposition',
       },
       value: {
-        eyebrow: 'How we build',
-        statement:
-          'Software built to solve real problems, grow with you and turn an idea into a working solution.',
+        eyebrow: 'Features',
+        statement: 'Technology built to move forward',
+        description:
+          'Digital solutions designed to solve real needs, remain clear and evolve with every project.',
         items: {
           purpose: {
             title: 'Problem-focused',
@@ -214,6 +221,21 @@ export const resources = {
             description:
               'Frontend, backend and data work as one coherent, maintainable solution ready to evolve.',
           },
+          scalability: {
+            title: 'Ready to grow',
+            description:
+              'a well-structured foundation that supports new features without rebuilding the product from scratch.',
+          },
+          adaptability: {
+            title: 'Adaptable technology',
+            description:
+              'tools are selected around each project instead of forcing every need into one solution.',
+          },
+          communication: {
+            title: 'Transparent progress',
+            description:
+              'direct communication to understand the work status and make timely decisions.',
+          },
           partnership: {
             title: 'Collaborative process',
             description:
@@ -222,11 +244,11 @@ export const resources = {
         },
       },
       services: {
-        eyebrow: 'Services',
-        title: 'End-to-end digital solutions.',
+        eyebrow: 'Capabilities',
+        title: 'Technology services',
         description:
-          'I design and build software around the context, goals and operation of each project.',
-        cta: 'Request a proposal',
+          'I help businesses move their digital transformation forward with tailored, scalable and clear solutions. Technology selected to turn complex needs into useful tools.',
+        cta: 'More information',
         items: {
           web: {
             title: 'Web systems',
@@ -238,20 +260,10 @@ export const resources = {
             description:
               'Tools that organize processes, centralize information and support daily operations.',
           },
-          frontend: {
-            title: 'Frontend and web experiences',
-            description:
-              'Clear, responsive interfaces that turn requirements into useful experiences.',
-          },
           backend: {
-            title: 'Backend and APIs',
+            title: 'Backend and integrations',
             description:
               'Robust services and integrations connecting products, platforms and workflows.',
-          },
-          data: {
-            title: 'Databases',
-            description:
-              'Data modeling and management with a consistent, secure and maintainable structure.',
           },
           automation: {
             title: 'Automation',
