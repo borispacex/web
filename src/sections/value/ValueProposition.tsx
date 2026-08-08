@@ -16,7 +16,11 @@ export function ValueProposition() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="value-title" className="border-b border-border bg-surface-alt" id="propuesta">
+    <section
+      aria-labelledby="value-title"
+      className="border-y border-primary/10 bg-[var(--section-tint)]"
+      id="propuesta"
+    >
       <Container className="py-24 sm:py-32">
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">

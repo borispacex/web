@@ -1,12 +1,13 @@
-import { BriefcaseBusiness, GitBranch, Mail, MessageCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { brandAssets } from '../../config/brand';
+import { GitHubIcon, LinkedInIcon, WhatsAppIcon } from '../icons/BrandIcons';
 import { Container } from '../ui/Container';
 
 const contactLinks = [
   {
     href: 'https://wa.me/59160514138',
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     labelKey: 'contact.channels.whatsapp',
     value: '+591 60514138',
     external: true,
@@ -23,12 +24,12 @@ const contactLinks = [
 const socialLinks = [
   {
     href: 'https://github.com/borispacex',
-    icon: GitBranch,
+    icon: GitHubIcon,
     labelKey: 'contact.channels.github',
   },
   {
     href: 'https://www.linkedin.com/in/boris-vargas-paucara-b5485a145/',
-    icon: BriefcaseBusiness,
+    icon: LinkedInIcon,
     labelKey: 'contact.channels.linkedin',
   },
 ] as const;
@@ -61,7 +62,7 @@ export function Footer() {
                 target={external ? '_blank' : undefined}
               >
                 <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/15 text-accent">
-                  <Icon aria-hidden="true" className="size-4" strokeWidth={1.7} />
+                  <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
                 </span>
                 <span className="min-w-0">
                   <span className="block text-[0.65rem] text-moon/50">{t(labelKey)}</span>
@@ -84,7 +85,7 @@ export function Footer() {
                 rel="noreferrer"
                 target="_blank"
               >
-                <Icon aria-hidden="true" className="size-5" strokeWidth={1.6} />
+                <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
                 <span className="sr-only"> {t('accessibility.opensNewTab')}</span>
               </a>
             ))}

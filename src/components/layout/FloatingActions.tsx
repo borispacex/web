@@ -1,6 +1,7 @@
-import { ArrowUp, MessageCircle } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { WhatsAppIcon } from '../icons/BrandIcons';
 
 export function FloatingActions() {
   const { t } = useTranslation();
@@ -38,8 +39,8 @@ export function FloatingActions() {
         rel="noreferrer"
         target="_blank"
       >
-        <span className="grid size-7 place-items-center rounded-full bg-primary">
-          <MessageCircle aria-hidden="true" className="size-4" />
+        <span className="grid size-7 place-items-center rounded-full bg-[#25d366] text-white">
+          <WhatsAppIcon aria-hidden="true" className="size-4.5" />
         </span>
         <span className="hidden text-sm font-semibold sm:inline">{t('floating.whatsappShort')}</span>
         <span className="sr-only"> {t('accessibility.opensNewTab')}</span>

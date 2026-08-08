@@ -10,7 +10,11 @@ export function Projects() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="projects-title" className="bg-background" id="proyectos">
+    <section
+      aria-labelledby="projects-title"
+      className="border-y border-border bg-surface-alt"
+      id="proyectos"
+    >
       <Container className="py-24 sm:py-32">
         <Reveal>
           <SectionHeading
