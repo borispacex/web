@@ -42,9 +42,7 @@
         } catch {
           storedTheme = null;
         }
-        const theme = ['light', 'dark', 'system'].includes(storedTheme)
-          ? storedTheme
-          : 'system';
+        const theme = ['light', 'dark'].includes(storedTheme) ? storedTheme : 'system';
         const isDark =
           theme === 'dark' ||
           (theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);

@@ -30,9 +30,8 @@ export const resources = {
       },
       theme: {
         label: 'Tema',
-        system: 'Sistema',
-        light: 'Claro',
-        dark: 'Oscuro',
+        activateLight: 'Activar tema claro',
+        activateDark: 'Activar tema oscuro',
       },
       hero: {
         eyebrow: 'Full Stack Developer · Freelance',
@@ -247,9 +246,8 @@ export const resources = {
       },
       theme: {
         label: 'Theme',
-        system: 'System',
-        light: 'Light',
-        dark: 'Dark',
+        activateLight: 'Switch to light theme',
+        activateDark: 'Switch to dark theme',
       },
       hero: {
         eyebrow: 'Full Stack Developer · Freelance',

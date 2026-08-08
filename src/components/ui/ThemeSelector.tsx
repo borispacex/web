@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Monitor, Moon, Sun } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
   getStoredTheme,
+  getResolvedTheme,
   setTheme,
-  themes,
   type Theme,
 } from '../../features/theme/theme';
 
@@ -12,54 +12,42 @@ type ThemeSelectorProps = {
   id: string;
 };
 
-const themeIcons = {
-  system: Monitor,
-  light: Sun,
-  dark: Moon,
-} as const;
-
 export function ThemeSelector({ id }: ThemeSelectorProps) {
   const { t } = useTranslation();
-  const [theme, updateTheme] = useState<Theme>(getStoredTheme);
+  const [theme, updateTheme] = useState<Theme>(() => getResolvedTheme());
 
-  const handleChange = (value: string): void => {
-    const selectedTheme = themes.find((item) => item === value);
+  useEffect(() => {
+    if (getStoredTheme() !== 'system') return undefined;
 
-    if (selectedTheme) {
-      updateTheme(selectedTheme);
-      setTheme(selectedTheme);
-    }
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = (): void => {
+      updateTheme(mediaQuery.matches ? 'dark' : 'light');
+    };
+
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemThemeChange);
+  }, []);
+
+  const handleToggle = (): void => {
+    const selectedTheme: Theme = theme === 'light' ? 'dark' : 'light';
+    updateTheme(selectedTheme);
+    setTheme(selectedTheme);
   };
 
-  return (
-    <div
-      aria-label={t('theme.label')}
-      className="flex min-h-10 items-center rounded-full border border-border bg-surface-alt p-1"
-      id={id}
-      role="group"
-    >
-      {themes.map((item) => {
-        const Icon = themeIcons[item];
-        const isActive = theme === item;
+  const isLight = theme === 'light';
+  const label = t(isLight ? 'theme.activateDark' : 'theme.activateLight');
+  const Icon = isLight ? Moon : Sun;
 
-        return (
-          <button
-            aria-label={t(`theme.${item}`)}
-            aria-pressed={isActive}
-            className={`grid size-8 place-items-center rounded-full transition-colors ${
-              isActive
-                ? 'bg-foreground text-background shadow-sm'
-                : 'text-muted-foreground hover:text-foreground'
-            }`}
-            key={item}
-            onClick={() => handleChange(item)}
-            title={t(`theme.${item}`)}
-            type="button"
-          >
-            <Icon aria-hidden="true" className="size-4" strokeWidth={1.8} />
-          </button>
-        );
-      })}
-    </div>
+  return (
+    <button
+      aria-label={label}
+      className="grid size-10 place-items-center rounded-full border border-border bg-surface-alt text-foreground transition-colors hover:bg-surface"
+      id={id}
+      onClick={handleToggle}
+      title={label}
+      type="button"
+    >
+      <Icon aria-hidden="true" className="size-4" strokeWidth={1.8} />
+    </button>
   );
 }

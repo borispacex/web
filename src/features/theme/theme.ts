@@ -1,6 +1,7 @@
-export const themes = ['light', 'dark', 'system'] as const;
+export const themes = ['light', 'dark'] as const;
 
 export type Theme = (typeof themes)[number];
+type ThemePreference = Theme | 'system';
 
 const storageKey = 'borispacex-theme';
 const darkModeQuery = '(prefers-color-scheme: dark)';
@@ -8,7 +9,7 @@ const darkModeQuery = '(prefers-color-scheme: dark)';
 const isTheme = (value: string | null): value is Theme =>
   themes.some((theme) => theme === value);
 
-export const getStoredTheme = (): Theme => {
+export const getStoredTheme = (): ThemePreference => {
   try {
     const storedTheme = localStorage.getItem(storageKey);
     return isTheme(storedTheme) ? storedTheme : 'system';
@@ -17,9 +18,15 @@ export const getStoredTheme = (): Theme => {
   }
 };
 
-const applyTheme = (theme: Theme): void => {
+export const getResolvedTheme = (
+  theme: ThemePreference = getStoredTheme(),
+): Theme => {
   const prefersDark = window.matchMedia(darkModeQuery).matches;
-  const isDark = theme === 'dark' || (theme === 'system' && prefersDark);
+  return theme === 'system' ? (prefersDark ? 'dark' : 'light') : theme;
+};
+
+const applyTheme = (theme: ThemePreference): void => {
+  const isDark = getResolvedTheme(theme) === 'dark';
   const themeColor = document.querySelector<HTMLMetaElement>(
     'meta[name="theme-color"]',
   );
