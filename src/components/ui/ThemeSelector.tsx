@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Monitor, Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
   getStoredTheme,
@@ -10,6 +11,12 @@ import {
 type ThemeSelectorProps = {
   id: string;
 };
+
+const themeIcons = {
+  system: Monitor,
+  light: Sun,
+  dark: Moon,
+} as const;
 
 export function ThemeSelector({ id }: ThemeSelectorProps) {
   const { t } = useTranslation();
@@ -25,20 +32,34 @@ export function ThemeSelector({ id }: ThemeSelectorProps) {
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <label className="text-sm text-muted-foreground" htmlFor={id}>
-        {t('theme.label')}
-      </label>
-      <select
-        className="min-h-11 rounded-lg border border-border bg-surface px-3 text-sm font-medium text-foreground"
-        id={id}
-        onChange={(event) => handleChange(event.target.value)}
-        value={theme}
-      >
-        <option value="system">{t('theme.system')}</option>
-        <option value="light">{t('theme.light')}</option>
-        <option value="dark">{t('theme.dark')}</option>
-      </select>
+    <div
+      aria-label={t('theme.label')}
+      className="flex min-h-10 items-center rounded-full border border-border bg-surface-alt p-1"
+      id={id}
+      role="group"
+    >
+      {themes.map((item) => {
+        const Icon = themeIcons[item];
+        const isActive = theme === item;
+
+        return (
+          <button
+            aria-label={t(`theme.${item}`)}
+            aria-pressed={isActive}
+            className={`grid size-8 place-items-center rounded-full transition-colors ${
+              isActive
+                ? 'bg-foreground text-background shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+            key={item}
+            onClick={() => handleChange(item)}
+            title={t(`theme.${item}`)}
+            type="button"
+          >
+            <Icon aria-hidden="true" className="size-4" strokeWidth={1.8} />
+          </button>
+        );
+      })}
     </div>
   );
 }

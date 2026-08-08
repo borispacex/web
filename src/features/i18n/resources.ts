@@ -36,12 +36,14 @@ export const resources = {
       },
       hero: {
         eyebrow: 'Full Stack Developer · Freelance',
-        titleStart: 'De la idea',
-        titleAccent: 'al deploy.',
+        brandStart: 'BORIS',
+        brandAccent: 'PACEX',
+        tagline: 'De la idea al deploy.',
         description:
           'Desarrollo sistemas, aplicaciones web y soluciones digitales pensadas para resolver problemas reales.',
         primaryCta: 'Hablemos de tu proyecto',
         manifesto: 'Code. Build. Deploy. Explore.',
+        scrollLabel: 'Explorar la propuesta de valor',
       },
       value: {
         statement:
@@ -236,12 +238,14 @@ export const resources = {
       },
       hero: {
         eyebrow: 'Full Stack Developer · Freelance',
-        titleStart: 'From idea',
-        titleAccent: 'to deployment.',
+        brandStart: 'BORIS',
+        brandAccent: 'PACEX',
+        tagline: 'From idea to deployment.',
         description:
           'I build software systems, web applications and digital solutions designed to solve real problems.',
         primaryCta: "Let's talk about your project",
         manifesto: 'Code. Build. Deploy. Explore.',
+        scrollLabel: 'Explore the value proposition',
       },
       value: {
         statement:

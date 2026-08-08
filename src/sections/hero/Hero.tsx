@@ -1,7 +1,6 @@
-import { ArrowDownRight } from 'lucide-react';
+import { Braces, ChevronDown, Code2, Terminal } from 'lucide-react';
 import { m, useReducedMotion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../../components/ui/Button';
 import { Container } from '../../components/ui/Container';
 import './hero.css';
 
@@ -13,57 +12,61 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="hero relative isolate overflow-hidden"
+      className="hero isolate overflow-hidden"
       id="inicio"
     >
-      <Container className="grid min-h-[calc(100svh-4rem)] items-center gap-12 py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.95fr)] lg:py-24">
+      <div aria-hidden="true" className="hero__grid" />
+      <div aria-hidden="true" className="hero__object hero__object--left">
+        <Code2 />
+      </div>
+      <div aria-hidden="true" className="hero__object hero__object--right">
+        <Terminal />
+      </div>
+      <div aria-hidden="true" className="hero__object hero__object--bottom">
+        <Braces />
+      </div>
+
+      <Container className="relative flex min-h-[calc(100svh-4.75rem)] flex-col items-center justify-center py-16 text-center sm:py-20">
         <m.div
-          animate={{ opacity: 1, y: 0 }}
-          className="relative z-10"
-          initial={enterFrom}
-          transition={{ duration: 0.55, ease: 'easeOut' }}
+          animate={{ opacity: 1, scale: 1 }}
+          aria-hidden="true"
+          className="hero__emblem"
+          initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.75, ease: 'easeOut' }}
         >
-          <p className="mb-5 text-sm font-semibold tracking-[0.18em] text-primary uppercase">
-            {t('hero.eyebrow')}
-          </p>
-          <h1
-            className="max-w-4xl text-[clamp(3rem,8vw,7rem)] leading-[0.92] font-semibold tracking-[-0.055em] text-balance"
-            id="hero-title"
-          >
-            {t('hero.titleStart')}{' '}
-            <span className="hero__accent">{t('hero.titleAccent')}</span>
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-            {t('hero.description')}
-          </p>
-          <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <Button href="#contacto">
-              {t('hero.primaryCta')}
-              <ArrowDownRight aria-hidden="true" className="ml-2 size-4" />
-            </Button>
-            <p className="font-mono text-xs tracking-[0.14em] text-muted-foreground uppercase">
-              {t('hero.manifesto')}
-            </p>
-          </div>
+          <span className="hero__moon" />
+          <span className="hero__orbit hero__orbit--one" />
+          <span className="hero__orbit hero__orbit--two" />
+          <span className="hero__orbital-node" />
         </m.div>
 
         <m.div
-          aria-hidden="true"
-          animate={{ opacity: 1, scale: 1 }}
-          className="hero__visual mx-auto aspect-square w-full max-w-[34rem]"
-          initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.94 }}
-          transition={{ delay: 0.12, duration: 0.7, ease: 'easeOut' }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative z-10 flex flex-col items-center"
+          initial={enterFrom}
+          transition={{ delay: 0.1, duration: 0.6, ease: 'easeOut' }}
         >
-          <div className="hero__orbit hero__orbit--outer" />
-          <div className="hero__orbit hero__orbit--inner" />
-          <div className="hero__moon" />
-          <div className="hero__horizon" />
-          <div className="hero__signal">
-            <span />
-            <span />
-            <span />
-          </div>
+          <p className="hero__eyebrow">{t('hero.eyebrow')}</p>
+          <h1 className="hero__title" id="hero-title">
+            <span>{t('hero.brandStart')}</span>
+            <span className="hero__title-accent">{t('hero.brandAccent')}</span>
+          </h1>
+          <p className="hero__tagline">{t('hero.tagline')}</p>
+          <p className="hero__description">{t('hero.description')}</p>
+          <a className="hero__cta" href="#contacto">
+            {t('hero.primaryCta')}
+            <span aria-hidden="true">↗</span>
+          </a>
+          <p className="hero__manifesto">{t('hero.manifesto')}</p>
         </m.div>
+
+        <a
+          aria-label={t('hero.scrollLabel')}
+          className="hero__scroll"
+          href="#propuesta"
+        >
+          <ChevronDown aria-hidden="true" className="size-5" />
+        </a>
       </Container>
     </section>
   );

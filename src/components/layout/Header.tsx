@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Container } from '../ui/Container';
 import { LanguageSelector } from '../ui/LanguageSelector';
@@ -34,18 +34,22 @@ export function Header() {
   const closeMenu = (): void => setIsMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
-      <Container className="flex min-h-16 items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-2xl">
+      <Container className="flex min-h-[4.75rem] items-center justify-between gap-4">
         <a
-          className="rounded-sm text-sm font-bold tracking-[0.16em] text-foreground"
+          className="group flex items-center gap-3 rounded-sm text-sm font-bold tracking-[0.18em] text-foreground"
           href="#inicio"
           onClick={closeMenu}
         >
-          {t('app.name')}
+          <span
+            aria-hidden="true"
+            className="size-2.5 rounded-full bg-primary shadow-[0_0_1rem_var(--primary)] transition-transform group-hover:scale-125"
+          />
+          <span>{t('app.name')}</span>
         </a>
 
         <nav aria-label={t('navigation.primary')} className="hidden lg:block">
-          <ul className="flex items-center gap-6">
+          <ul className="flex items-center gap-7 rounded-full border border-border bg-surface/70 px-6 py-3">
             {navigationItems.map((item) => (
               <li key={item.href}>
                 <a
@@ -59,16 +63,23 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <LanguageSelector id="desktop-language" />
           <ThemeSelector id="desktop-theme" />
+          <a
+            className="ml-1 inline-flex min-h-10 items-center gap-2 rounded-full bg-foreground px-5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
+            href="#contacto"
+          >
+            {t('navigation.contact')}
+            <ArrowUpRight aria-hidden="true" className="size-4" />
+          </a>
         </div>
 
         <button
           aria-controls="mobile-navigation"
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? t('menu.close') : t('menu.open')}
-          className="inline-flex size-11 items-center justify-center rounded-lg border border-border bg-surface text-foreground lg:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-surface text-foreground lg:hidden"
           onClick={() => setIsMenuOpen((current) => !current)}
           ref={menuButtonRef}
           type="button"
@@ -78,7 +89,7 @@ export function Header() {
       </Container>
 
       <div
-        className={`${isMenuOpen ? 'grid' : 'hidden'} border-t border-border bg-background lg:hidden`}
+        className={`${isMenuOpen ? 'grid' : 'hidden'} border-t border-border bg-background/95 backdrop-blur-2xl lg:hidden`}
         id="mobile-navigation"
       >
         <Container className="grid gap-6 py-6">
@@ -97,9 +108,15 @@ export function Header() {
               ))}
             </ul>
           </nav>
-          <div className="grid gap-3 border-t border-border pt-5 sm:grid-cols-2">
-            <LanguageSelector id="mobile-language" />
-            <ThemeSelector id="mobile-theme" />
+          <div className="grid gap-5 border-t border-border pt-5 sm:grid-cols-2">
+            <div className="flex items-center justify-between gap-4 sm:justify-start">
+              <span className="text-sm text-muted-foreground">{t('language.label')}</span>
+              <LanguageSelector id="mobile-language" />
+            </div>
+            <div className="flex items-center justify-between gap-4 sm:justify-start">
+              <span className="text-sm text-muted-foreground">{t('theme.label')}</span>
+              <ThemeSelector id="mobile-theme" />
+            </div>
           </div>
         </Container>
       </div>

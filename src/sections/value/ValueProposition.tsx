@@ -13,7 +13,7 @@ export function ValueProposition() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="value-title" className="border-y border-border bg-surface">
+    <section aria-labelledby="value-title" className="border-y border-border bg-surface" id="propuesta">
       <Container className="py-20 sm:py-24">
         <Reveal>
           <p className="max-w-4xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-5xl" id="value-title">

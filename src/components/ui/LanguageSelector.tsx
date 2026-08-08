@@ -18,19 +18,31 @@ export function LanguageSelector({ id }: LanguageSelectorProps) {
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <label className="text-sm text-muted-foreground" htmlFor={id}>
-        {t('language.label')}
-      </label>
-      <select
-        className="min-h-11 rounded-lg border border-border bg-surface px-3 text-sm font-medium text-foreground"
-        id={id}
-        onChange={(event) => handleChange(event.target.value)}
-        value={currentLanguage}
-      >
-        <option value="es">{t('language.es')}</option>
-        <option value="en">{t('language.en')}</option>
-      </select>
+    <div
+      aria-label={t('language.label')}
+      className="flex min-h-10 items-center rounded-full border border-border bg-surface-alt p-1"
+      id={id}
+      role="group"
+    >
+      {languages.map((language) => {
+        const isActive = currentLanguage === language;
+
+        return (
+          <button
+            aria-pressed={isActive}
+            className={`min-h-8 min-w-10 rounded-full px-2 text-xs font-semibold transition-colors ${
+              isActive
+                ? 'bg-foreground text-background shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+            key={language}
+            onClick={() => handleChange(language)}
+            type="button"
+          >
+            {t(`language.${language}`)}
+          </button>
+        );
+      })}
     </div>
   );
 }
