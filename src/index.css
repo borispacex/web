@@ -4,6 +4,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
+  --color-void: var(--brand-void);
+  --color-moon: var(--brand-moon);
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-surface-alt: var(--surface-alt);

@@ -46,6 +46,7 @@ export const resources = {
         scrollLabel: 'Explorar la propuesta de valor',
       },
       value: {
+        eyebrow: 'Nuestra forma de construir',
         statement:
           'Software pensado para resolver, crecer contigo y convertir una idea en una solución que funciona.',
         items: {
@@ -71,6 +72,7 @@ export const resources = {
         title: 'Soluciones digitales de principio a fin.',
         description:
           'Diseño y desarrollo software adaptado al contexto, los objetivos y la operación de cada proyecto.',
+        cta: 'Solicitar una propuesta',
         items: {
           web: {
             title: 'Sistemas web',
@@ -123,6 +125,7 @@ export const resources = {
         title: 'Tecnología al servicio del producto.',
         description:
           'Una visión full stack para conectar experiencia, lógica, datos y entrega en una solución consistente.',
+        systemLabel: 'BORISPACEX / sistema de capacidades',
         items: {
           interfaces: {
             title: 'Interfaces responsive',
@@ -248,6 +251,7 @@ export const resources = {
         scrollLabel: 'Explore the value proposition',
       },
       value: {
+        eyebrow: 'How we build',
         statement:
           'Software built to solve real problems, grow with you and turn an idea into a working solution.',
         items: {
@@ -273,6 +277,7 @@ export const resources = {
         title: 'End-to-end digital solutions.',
         description:
           'I design and build software around the context, goals and operation of each project.',
+        cta: 'Request a proposal',
         items: {
           web: {
             title: 'Web systems',
@@ -325,6 +330,7 @@ export const resources = {
         title: 'Technology serving the product.',
         description:
           'A full-stack perspective connecting experience, logic, data and delivery in one consistent solution.',
+        systemLabel: 'BORISPACEX / capability system',
         items: {
           interfaces: {
             title: 'Responsive interfaces',

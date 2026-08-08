@@ -1,6 +1,9 @@
 :root {
   color-scheme: light;
 
+  --brand-void: #05070d;
+  --brand-moon: #f5f7fa;
+
   --background: #f5f7fa;
   --surface: #ffffff;
   --surface-alt: #eef2f7;
