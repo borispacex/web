@@ -68,10 +68,34 @@ svg {
 }
 
 .brand-orbital-arc {
-  background-image: url("./assets/brand/backgrounds/orbital-arc.svg");
-  background-repeat: no-repeat;
-  background-position: right -10rem center;
-  background-size: min(50rem, 70vw) auto;
+  background-image:
+    url("./assets/brand/backgrounds/orbital-arc.svg"),
+    url("./assets/brand/backgrounds/stars-subtle.svg"),
+    radial-gradient(
+      circle at 16% 72%,
+      color-mix(in srgb, var(--accent) 10%, transparent),
+      transparent 20rem
+    );
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: right -10rem center, center, center;
+  background-size: min(50rem, 70vw) auto, cover, auto;
+}
+
+.brand-projects-background {
+  background-color: var(--surface-alt);
+  background-image:
+    radial-gradient(
+      circle at 82% 18%,
+      color-mix(in srgb, var(--primary) 13%, transparent),
+      transparent 24rem
+    ),
+    linear-gradient(color-mix(in srgb, var(--primary) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--primary) 5%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: auto, 4rem 4rem, 4rem 4rem;
 }
 
 .skip-link {

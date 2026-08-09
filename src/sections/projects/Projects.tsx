@@ -37,7 +37,7 @@ export function Projects() {
   return (
     <section
       aria-labelledby="projects-title"
-      className="border-y border-border bg-surface-alt"
+      className="brand-projects-background border-y border-border"
       id="proyectos"
     >
       <Container className="py-24 sm:py-28 lg:py-20">

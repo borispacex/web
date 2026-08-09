@@ -179,8 +179,9 @@ export const resources = {
         },
         channels: {
           email: 'Correo electrónico',
+          facebook: 'Facebook',
           github: 'GitHub',
-          linkedin: 'LinkedIn',
+          tiktok: 'TikTok',
           whatsapp: 'WhatsApp',
         },
       },
@@ -374,8 +375,9 @@ export const resources = {
         },
         channels: {
           email: 'Email',
+          facebook: 'Facebook',
           github: 'GitHub',
-          linkedin: 'LinkedIn',
+          tiktok: 'TikTok',
           whatsapp: 'WhatsApp',
         },
       },

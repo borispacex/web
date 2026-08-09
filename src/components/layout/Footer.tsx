@@ -1,7 +1,7 @@
 import { Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { brandAssets } from '../../config/brand';
-import { GitHubIcon, LinkedInIcon, WhatsAppIcon } from '../icons/BrandIcons';
+import { FacebookIcon, GitHubIcon, TikTokIcon, WhatsAppIcon } from '../icons/BrandIcons';
 import { Container } from '../ui/Container';
 
 const contactLinks = [
@@ -28,9 +28,14 @@ const socialLinks = [
     labelKey: 'contact.channels.github',
   },
   {
-    href: 'https://www.linkedin.com/in/boris-vargas-paucara-b5485a145/',
-    icon: LinkedInIcon,
-    labelKey: 'contact.channels.linkedin',
+    href: 'https://www.facebook.com/boris.vargaspaucara.9/',
+    icon: FacebookIcon,
+    labelKey: 'contact.channels.facebook',
+  },
+  {
+    href: 'https://www.tiktok.com/@borispacex',
+    icon: TikTokIcon,
+    labelKey: 'contact.channels.tiktok',
   },
 ] as const;
 
@@ -59,10 +64,8 @@ export function Footer() {
             </a>
             <p className="mt-2 text-xs text-muted-foreground">
               © {currentYear}{' '}
-              <span className="font-display text-[0.68rem] tracking-[0.08em] text-foreground">
-                BORISPACE
-              </span>
-              <span className="font-display text-[0.68rem] tracking-[0.08em] text-primary">X</span>.{' '}
+              <span className="font-semibold text-foreground">BORISPACE</span>
+              <span className="font-semibold text-primary">X</span>.{' '}
               {t('footer.rights')}
             </p>
           </div>
