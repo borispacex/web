@@ -113,18 +113,41 @@ export const resources = {
       },
       projects: {
         eyebrow: 'Proyectos',
-        title: 'Trabajo seleccionado, explicado con claridad.',
-        description:
-          'Esta sección mostrará el problema, la solución y el impacto de proyectos reales.',
-        hardwareStore: {
-          status: 'En desarrollo',
-          category: 'Sistema empresarial',
-          title: 'Sistema para ferretería',
-          description:
-            'Proyecto orientado a digitalizar y organizar la operación de una ferretería. El alcance y las funciones se documentarán a medida que avance el desarrollo.',
-          note: 'Caso de estudio en construcción. No se presentan todavía resultados ni funcionalidades como definitivas.',
-          cta: 'Conversemos sobre una solución similar',
-          visualLabel: 'Visualización conceptual',
+        title: 'Proyectos digitales con propósito.',
+        description: 'Trabajo publicado y soluciones que actualmente se encuentran en desarrollo.',
+        status: {
+          published: 'Publicado',
+          inDevelopment: 'En desarrollo',
+        },
+        viewProject: 'Ver proyecto',
+        comingSoon: 'Próximamente',
+        items: {
+          cv: {
+            category: 'Sitio profesional',
+            title: 'Currículum vitae',
+            description:
+              'Presentación web de perfil, experiencia, formación, habilidades y proyectos profesionales.',
+            imageAlt: 'Vista previa del currículum web de Boris Vargas',
+          },
+          restaurant: {
+            category: 'Landing comercial',
+            title: 'Pollos Misión',
+            description:
+              'Landing page para restaurante con acceso centralizado al menú y sus canales sociales.',
+            imageAlt: 'Vista previa de la landing page de Pollos Misión',
+          },
+          hardwareStore: {
+            category: 'Sistema empresarial',
+            title: 'Sistema para ferretería',
+            description:
+              'Solución orientada a digitalizar y organizar la operación diaria de una ferretería.',
+          },
+          physiotherapy: {
+            category: 'Sistema de gestión',
+            title: 'Sistema para fisioterapia',
+            description:
+              'Proyecto digital para apoyar la organización y atención de un centro de fisioterapia.',
+          },
         },
       },
       growth: {
@@ -285,18 +308,41 @@ export const resources = {
       },
       projects: {
         eyebrow: 'Projects',
-        title: 'Selected work, explained clearly.',
-        description:
-          'This section will present the problem, solution and impact of real projects.',
-        hardwareStore: {
-          status: 'In development',
-          category: 'Business system',
-          title: 'Hardware store system',
-          description:
-            'A project focused on digitizing and organizing the operation of a hardware store. Scope and features will be documented as development progresses.',
-          note: 'Case study in progress. Results and features are not presented as final yet.',
-          cta: 'Discuss a similar solution',
-          visualLabel: 'Concept visualization',
+        title: 'Purposeful digital projects.',
+        description: 'Published work and solutions that are currently in development.',
+        status: {
+          published: 'Published',
+          inDevelopment: 'In development',
+        },
+        viewProject: 'View project',
+        comingSoon: 'Coming soon',
+        items: {
+          cv: {
+            category: 'Professional website',
+            title: 'Curriculum vitae',
+            description:
+              'A web presentation of professional profile, experience, education, skills and projects.',
+            imageAlt: 'Preview of Boris Vargas’s curriculum website',
+          },
+          restaurant: {
+            category: 'Commercial landing page',
+            title: 'Pollos Misión',
+            description:
+              'A restaurant landing page providing centralized access to its menu and social channels.',
+            imageAlt: 'Preview of the Pollos Misión landing page',
+          },
+          hardwareStore: {
+            category: 'Business system',
+            title: 'Hardware store system',
+            description:
+              'A solution focused on digitizing and organizing the daily operation of a hardware store.',
+          },
+          physiotherapy: {
+            category: 'Management system',
+            title: 'Physiotherapy system',
+            description:
+              'A digital project designed to support the organization and service of a physiotherapy center.',
+          },
         },
       },
       growth: {
