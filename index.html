@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/web/brand/favicon/favicon.svg" />
+    <link rel="icon" sizes="32x32" type="image/png" href="/web/brand/favicon/favicon-32x32.png" />
+    <link rel="alternate icon" href="/web/brand/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/web/brand/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/web/manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BORISPACEX crea páginas web, landing pages, sistemas para negocios y sitios WordPress."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#F5F7FA" />
+    <link rel="canonical" href="https://borispacex.github.io/web/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://borispacex.github.io/web/" />
+    <meta property="og:site_name" content="BORISPACEX" />
+    <meta property="og:locale" content="es_BO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="BORISPACEX · Desarrollador Full Stack" />
+    <meta
+      property="og:description"
+      content="Páginas web, landing pages, sistemas para negocios, WordPress y mantenimiento."
+    />
+    <meta property="og:image" content="https://borispacex.github.io/web/brand/social/borispacex-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BORISPACEX · Desarrollador Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Páginas web, landing pages, sistemas para negocios, WordPress y mantenimiento."
+    />
+    <meta name="twitter:image" content="https://borispacex.github.io/web/brand/social/borispacex-og.png" />
+    <title>BORISPACEX · Full Stack Developer</title>
+    <script>
+      (() => {
+        const storageKey = 'borispacex-theme';
+        let storedTheme = null;
+
+        try {
+          storedTheme = localStorage.getItem(storageKey);
+        } catch {
+          storedTheme = null;
+        }
+        const theme = ['light', 'dark'].includes(storedTheme) ? storedTheme : 'system';
+        const isDark =
+          theme === 'dark' ||
+          (theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.dataset.theme = theme;
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+
+        if (themeColor) {
+          themeColor.content = isDark ? '#05070D' : '#F5F7FA';
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/web/assets/index-CHOrznAo.js"></script>
+    <link rel="stylesheet" crossorigin href="/web/assets/index-DPh1GtL0.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

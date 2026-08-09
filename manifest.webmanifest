@@ -1,0 +1,22 @@
+{
+  "name": "BORISPACEX",
+  "short_name": "BORISPACEX",
+  "description": "Páginas web, landing pages, sistemas para negocios, WordPress y mantenimiento.",
+  "start_url": "/web/",
+  "scope": "/web/",
+  "display": "standalone",
+  "background_color": "#05070D",
+  "theme_color": "#05070D",
+  "icons": [
+    {
+      "src": "brand/app-icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "brand/app-icons/android-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

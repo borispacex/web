@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="44%" r="56%">
+      <stop offset="0" stop-color="#1677FF" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#05070D" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0h64" fill="none" stroke="#8996A8" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#05070D"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <g transform="translate(90 128) scale(1.45)">
+    <path d="M36 177A105 105 0 0 1 214 53" fill="none" stroke="#1677FF" stroke-linecap="round" stroke-width="10"/>
+    <circle cx="128" cy="88" r="47" fill="#F5F7FA" stroke="#F5F7FA" stroke-width="8"/><circle cx="128" cy="88" r="34" fill="#081426"/>
+    <path d="M82 177v-20c0-30 20-49 46-49s46 19 46 49v20" fill="#F5F7FA" stroke="#F5F7FA" stroke-width="8"/>
+    <path d="M67 157h122l-9 67H76z" fill="#081426" stroke="#F5F7FA" stroke-width="4"/><path d="M61 224h134" stroke="#F5F7FA" stroke-linecap="round" stroke-width="8"/>
+    <text x="101" y="204" fill="#F5F7FA" font-family="Arial,sans-serif" font-size="58" font-weight="800">B</text><text x="139" y="204" fill="#1677FF" font-family="Arial,sans-serif" font-size="58" font-weight="800">X</text>
+  </g>
+  <text x="510" y="282" fill="#F5F7FA" font-family="Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="3">BORIS<tspan fill="#1677FF">PACEX</tspan></text>
+  <text x="514" y="350" fill="#8996A8" font-family="Arial,sans-serif" font-size="28">De la idea al deploy.</text>
+  <text x="514" y="410" fill="#35B9FF" font-family="monospace" font-size="18" letter-spacing="4">CODE. BUILD. DEPLOY. EXPLORE.</text>
+</svg>
