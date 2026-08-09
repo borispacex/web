@@ -21,7 +21,7 @@ export function ValueProposition() {
       className="border-y border-primary/10 bg-[var(--section-tint)]"
       id="propuesta"
     >
-      <Container className="py-24 sm:py-32">
+      <Container className="py-24 sm:py-28 lg:py-20">
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
             {t('value.eyebrow')}
@@ -37,14 +37,14 @@ export function ValueProposition() {
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-4 lg:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2 lg:grid-cols-3">
           {values.map(({ icon: Icon, key }) => (
             <Reveal className="h-full" key={key}>
-              <article className="group flex h-full min-h-48 flex-col items-center justify-center rounded-[1.25rem] border border-border bg-surface px-6 py-9 text-center transition-[border-color,transform] hover:-translate-y-1 hover:border-primary/40 sm:px-10">
+              <article className="group flex h-full min-h-44 flex-col items-center justify-center rounded-[1.25rem] border border-border bg-surface px-6 py-8 text-center transition-[border-color,transform] hover:-translate-y-1 hover:border-primary/40">
                 <div className="grid size-11 place-items-center rounded-xl bg-foreground text-background">
                   <Icon aria-hidden="true" className="size-6" strokeWidth={1.8} />
                 </div>
-                <p className="mt-5 max-w-xl leading-7 text-muted-foreground">
+                <p className="mt-4 max-w-xl text-sm leading-6 text-muted-foreground">
                   <strong className="font-semibold text-foreground">
                     {t(`value.items.${key}.title`)}:
                   </strong>{' '}

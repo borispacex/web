@@ -32,13 +32,13 @@ export function Growth() {
 
   return (
     <section aria-labelledby="growth-title" className="overflow-hidden bg-background">
-      <Container className="py-24 text-center sm:py-32">
+      <Container className="py-24 text-center sm:py-28 lg:py-20">
         <Reveal>
           <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
             {t('growth.eyebrow')}
           </p>
           <h2
-            className="mx-auto mt-5 max-w-5xl text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.95] font-semibold tracking-[-0.06em] text-balance"
+            className="mx-auto mt-4 max-w-5xl text-[clamp(2.75rem,5.5vw,4.75rem)] leading-[0.95] font-semibold tracking-[-0.06em] text-balance"
             id="growth-title"
           >
             {t('growth.title')}

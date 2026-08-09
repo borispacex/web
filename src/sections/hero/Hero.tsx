@@ -27,7 +27,7 @@ export function Hero() {
         <Braces />
       </div>
 
-      <Container className="relative flex min-h-[calc(100svh-4.75rem)] flex-col items-center justify-center py-16 text-center sm:py-20">
+      <Container className="hero__container relative flex min-h-[calc(100svh-4.75rem)] flex-col items-center justify-center py-16 text-center sm:py-20">
         <m.div
           animate={{ opacity: 1, scale: 1 }}
           aria-hidden="true"

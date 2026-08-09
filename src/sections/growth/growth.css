@@ -1,6 +1,6 @@
 .growth__marquee {
   width: 100%;
-  padding-bottom: clamp(6rem, 10vw, 9rem);
+  padding-bottom: clamp(4.5rem, 7vw, 6rem);
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
@@ -14,7 +14,7 @@
 .growth__list {
   display: flex;
   align-items: center;
-  gap: clamp(4rem, 9vw, 9rem);
+  gap: clamp(3.5rem, 7vw, 7rem);
   margin: 0;
   padding: 0 clamp(2rem, 4.5vw, 4.5rem);
   list-style: none;
