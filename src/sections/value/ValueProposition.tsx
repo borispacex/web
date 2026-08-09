@@ -18,7 +18,7 @@ export function ValueProposition() {
   return (
     <section
       aria-labelledby="value-title"
-      className="border-y border-primary/10 bg-[var(--section-tint)]"
+      className="brand-space-grid border-y border-primary/10 bg-[var(--section-tint)]"
       id="propuesta"
     >
       <Container className="py-24 sm:py-28 lg:py-20">

@@ -43,9 +43,19 @@ export function Footer() {
       <Container className="py-8 sm:py-10">
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(12rem,0.8fr)_minmax(32rem,1.5fr)_auto]">
           <div>
-            <a className="inline-flex items-center gap-3 font-bold tracking-[0.16em]" href="#inicio">
-              <img alt="" aria-hidden="true" className="size-11" src={brandAssets.symbol} />
-              {t('app.name')}
+            <a aria-label={t('app.name')} className="inline-flex items-center" href="#inicio">
+              <img
+                alt=""
+                aria-hidden="true"
+                className="h-14 w-auto dark:hidden"
+                src={brandAssets.horizontalLight}
+              />
+              <img
+                alt=""
+                aria-hidden="true"
+                className="hidden h-14 w-auto dark:block"
+                src={brandAssets.horizontalDark}
+              />
             </a>
             <p className="mt-2 text-xs text-muted-foreground">
               {t('footer.copyright', { year: currentYear })}

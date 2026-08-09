@@ -18,13 +18,16 @@
 .hero__grid {
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    135deg,
-    transparent 0,
-    transparent 2.25rem,
-    color-mix(in srgb, var(--hero-muted) 7%, transparent) 2.25rem,
-    color-mix(in srgb, var(--hero-muted) 7%, transparent) calc(2.25rem + 1px)
-  );
+  background-image:
+    url("../../assets/brand/backgrounds/stars-subtle.svg"),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 2.25rem,
+      color-mix(in srgb, var(--hero-muted) 7%, transparent) 2.25rem,
+      color-mix(in srgb, var(--hero-muted) 7%, transparent) calc(2.25rem + 1px)
+    );
+  background-size: cover, auto;
   mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
 
@@ -32,7 +35,7 @@
   position: relative;
   width: clamp(10rem, 19vw, 16rem);
   aspect-ratio: 1;
-  margin-bottom: clamp(-1rem, -1vw, -0.25rem);
+  margin-bottom: 0.5rem;
 }
 
 .hero__logo-symbol {
@@ -200,7 +203,7 @@
 
   .hero__emblem {
     width: clamp(7rem, 17vh, 8.5rem);
-    margin-bottom: -0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .hero__eyebrow {

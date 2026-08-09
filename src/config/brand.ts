@@ -1,8 +1,9 @@
-const publicAsset = (path: string): string => `${import.meta.env.BASE_URL}${path}`;
+import hero from '../assets/brand/hero/borispacex-hero.webp';
+import horizontalDark from '../assets/brand/logo/borispacex-logo-horizontal-dark.png';
+import horizontalLight from '../assets/brand/logo/borispacex-logo-horizontal-light.png';
 
 export const brandAssets = {
-  favicon: publicAsset('brand/favicon.svg'),
-  horizontalDark: publicAsset('brand/borispacex-horizontal-dark.svg'),
-  horizontalLight: publicAsset('brand/borispacex-horizontal-light.svg'),
-  symbol: publicAsset('brand/borispacex-symbol.svg'),
+  hero,
+  horizontalDark,
+  horizontalLight,
 } as const;

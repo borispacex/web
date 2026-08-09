@@ -1,21 +1,24 @@
-import { Building2, PanelsTopLeft, ServerCog, Workflow } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import apiIcon from '../../assets/brand/icons/api.svg';
+import deployIcon from '../../assets/brand/icons/deploy.svg';
+import laptopIcon from '../../assets/brand/icons/laptop.svg';
+import webIcon from '../../assets/brand/icons/web.svg';
 import { Button } from '../../components/ui/Button';
 import { Container } from '../../components/ui/Container';
 import { Reveal } from '../../components/ui/Reveal';
 
 const services = [
-  { icon: PanelsTopLeft, key: 'web' },
-  { icon: Building2, key: 'business' },
-  { icon: ServerCog, key: 'backend' },
-  { icon: Workflow, key: 'automation' },
+  { icon: webIcon, key: 'web' },
+  { icon: laptopIcon, key: 'business' },
+  { icon: apiIcon, key: 'backend' },
+  { icon: deployIcon, key: 'automation' },
 ] as const;
 
 export function Services() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="services-title" className="bg-background" id="servicios">
+    <section aria-labelledby="services-title" className="brand-code-pattern bg-background" id="servicios">
       <Container className="grid gap-12 py-24 sm:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:py-20">
         <Reveal className="max-w-2xl">
           <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
@@ -39,11 +42,11 @@ export function Services() {
         </Reveal>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {services.map(({ icon: Icon, key }) => (
+          {services.map(({ icon, key }) => (
             <Reveal className="h-full" key={key}>
               <article className="group flex h-full min-h-40 flex-col items-center justify-center rounded-[1.5rem] border border-border bg-surface px-5 py-7 text-center transition-[border-color,transform,background-color] hover:-translate-y-1 hover:border-primary/40 hover:bg-surface-alt lg:aspect-[1.2/1] lg:min-h-0">
                 <span className="grid size-12 place-items-center text-foreground transition-colors group-hover:text-primary">
-                  <Icon aria-hidden="true" className="size-8" strokeWidth={1.9} />
+                  <img alt="" aria-hidden="true" className="size-9 dark:invert" src={icon} />
                 </span>
                 <h3 className="mt-5 max-w-40 text-sm font-semibold leading-5">
                   {t(`services.items.${key}.title`)}

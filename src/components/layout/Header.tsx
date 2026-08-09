@@ -38,12 +38,23 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-2xl">
       <Container className="flex min-h-[4.75rem] items-center justify-between gap-4">
         <a
-          className="group flex items-center gap-3 rounded-sm text-sm font-bold tracking-[0.18em] text-foreground"
+          aria-label={t('app.name')}
+          className="group flex items-center rounded-sm"
           href="#inicio"
           onClick={closeMenu}
         >
-          <img alt="" aria-hidden="true" className="size-9 transition-transform group-hover:scale-105" src={brandAssets.symbol} />
-          <span>{t('app.name')}</span>
+          <img
+            alt=""
+            aria-hidden="true"
+            className="h-13 w-auto transition-transform group-hover:scale-[1.02] dark:hidden"
+            src={brandAssets.horizontalLight}
+          />
+          <img
+            alt=""
+            aria-hidden="true"
+            className="hidden h-13 w-auto transition-transform group-hover:scale-[1.02] dark:block"
+            src={brandAssets.horizontalDark}
+          />
         </a>
 
         <nav aria-label={t('navigation.primary')} className="hidden lg:block">

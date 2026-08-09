@@ -53,6 +53,30 @@ svg {
   max-width: 100%;
 }
 
+.brand-space-grid {
+  background-image: url("./assets/brand/backgrounds/space-grid.svg");
+  background-size: 10rem 10rem;
+}
+
+.brand-code-pattern {
+  background-image: url("./assets/brand/backgrounds/code-pattern.svg");
+  background-size: 30rem 15rem;
+}
+
+.brand-earth-horizon {
+  background-image: url("./assets/brand/backgrounds/earth-horizon.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: min(75rem, 100%) auto;
+}
+
+.brand-orbital-arc {
+  background-image: url("./assets/brand/backgrounds/orbital-arc.svg");
+  background-repeat: no-repeat;
+  background-position: right -10rem center;
+  background-size: min(50rem, 70vw) auto;
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;

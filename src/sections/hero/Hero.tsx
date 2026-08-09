@@ -35,7 +35,7 @@ export function Hero() {
           initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.75, ease: 'easeOut' }}
         >
-          <img className="hero__logo-symbol" src={brandAssets.symbol} alt="" />
+          <img className="hero__logo-symbol" src={brandAssets.hero} alt="" />
         </m.div>
 
         <m.div

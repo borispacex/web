@@ -31,7 +31,7 @@ export function Growth() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="growth-title" className="overflow-hidden bg-background">
+    <section aria-labelledby="growth-title" className="brand-earth-horizon overflow-hidden bg-background">
       <Container className="py-24 text-center sm:py-28 lg:py-20">
         <Reveal>
           <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
