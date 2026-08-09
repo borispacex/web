@@ -13,7 +13,7 @@ Landing page comercial oficial de **BORISPACEX**, enfocada en presentar servicio
 - Navegación mediante anclas accesibles.
 - Animaciones sutiles con soporte para `prefers-reduced-motion`.
 - SEO y metadatos sociales básicos.
-- CI y despliegue automático mediante GitHub Actions.
+- Validación continua mediante GitHub Actions y despliegue con `gh-pages`.
 
 ## Tecnologías
 
@@ -57,6 +57,7 @@ Vite mostrará en la terminal la dirección local disponible.
 | `npm run lint` | Analiza el código con ESLint. |
 | `npm run build` | Comprueba TypeScript y genera la compilación de producción. |
 | `npm run preview` | Sirve localmente la compilación generada. |
+| `npm run deploy` | Compila y publica `dist/` en la rama `gh-pages`. |
 
 Antes de entregar cambios se recomienda ejecutar:
 
@@ -82,7 +83,7 @@ src/
 
 public/brand/         # Logo, símbolo, favicon y piezas sociales
 docs/                 # Marca, contenido, ingeniería y roadmap
-.github/workflows/    # Validación y despliegue
+.github/workflows/    # Validación continua
 ```
 
 ## Idiomas y temas
@@ -93,16 +94,17 @@ Los colores globales se definen mediante tokens semánticos en `src/styles/desig
 
 ## Despliegue
 
-Cada actualización de `main` ejecuta la validación y publica el contenido de `dist/` mediante GitHub Actions.
+El comando `npm run deploy` valida TypeScript, genera `dist/` y publica su contenido en la rama `gh-pages`.
 
 URL prevista:
 
 <https://borispacex.github.io/web/>
 
-Para habilitarlo, selecciona **GitHub Actions** como fuente en:
+Para habilitarlo, selecciona **Deploy from a branch** como fuente en:
 
 ```text
 Settings > Pages > Build and deployment > Source
+Branch: gh-pages / (root)
 ```
 
 La configuración `base: '/web/'` de `vite.config.ts` corresponde al nombre actual del repositorio.
