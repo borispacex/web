@@ -1,6 +1,10 @@
 :root {
   color-scheme: light;
 
+  --font-brand: "Michroma", "Eurostile", sans-serif;
+  --font-ui: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-code: "JetBrains Mono", ui-monospace, monospace;
+
   --brand-void: #05070d;
   --brand-deep: #081426;
   --brand-moon: #f5f7fa;

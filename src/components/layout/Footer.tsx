@@ -59,8 +59,11 @@ export function Footer() {
             </a>
             <p className="mt-2 text-xs text-muted-foreground">
               © {currentYear}{' '}
-              <span className="font-semibold text-foreground">BORISPACE</span>
-              <span className="font-semibold text-primary">X</span>. {t('footer.rights')}
+              <span className="font-display text-[0.68rem] tracking-[0.08em] text-foreground">
+                BORISPACE
+              </span>
+              <span className="font-display text-[0.68rem] tracking-[0.08em] text-primary">X</span>.{' '}
+              {t('footer.rights')}
             </p>
           </div>
 

@@ -55,10 +55,12 @@
 
 .hero__title {
   margin: 0;
-  font-size: clamp(3.25rem, 10.5vw, 9rem);
-  line-height: 0.82;
-  font-weight: 700;
-  letter-spacing: -0.075em;
+  font-family: var(--font-brand);
+  font-size: clamp(1.75rem, 7vw, 6.25rem);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .hero__title-accent {
@@ -105,7 +107,7 @@
 .hero__manifesto {
   margin-top: 1.25rem;
   color: var(--hero-muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-code);
   font-size: 0.67rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -178,10 +180,6 @@
     margin-bottom: 0.5rem;
   }
 
-  .hero__title {
-    display: grid;
-  }
-
   .hero__object--left,
   .hero__object--right {
     opacity: 0.55;
@@ -212,8 +210,8 @@
   }
 
   .hero__title {
-    font-size: clamp(4.75rem, 8vw, 6.75rem);
-    line-height: 0.84;
+    font-size: clamp(3.4rem, 5.75vw, 4.9rem);
+    line-height: 1.08;
   }
 
   .hero__tagline {
