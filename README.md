@@ -13,7 +13,7 @@ Landing page comercial oficial de **BORISPACEX**, enfocada en presentar servicio
 - Navegación mediante anclas accesibles.
 - Animaciones sutiles con soporte para `prefers-reduced-motion`.
 - SEO y metadatos sociales básicos.
-- Validación continua mediante GitHub Actions y despliegue con `gh-pages`.
+- Validación continua y despliegue automático mediante GitHub Actions, con despliegue manual alternativo usando `gh-pages`.
 
 ## Tecnologías
 
@@ -94,7 +94,7 @@ Los colores globales se definen mediante tokens semánticos en `src/styles/desig
 
 ## Despliegue
 
-El comando `npm run deploy` valida TypeScript, genera `dist/` y publica su contenido en la rama `gh-pages`.
+Cada actualización de `main` genera `dist/` y publica su contenido automáticamente en la rama `gh-pages` mediante GitHub Actions. Como alternativa, `npm run deploy` permite realizar la misma publicación manualmente desde el equipo local.
 
 URL prevista:
 
