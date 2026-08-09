@@ -120,5 +120,6 @@ Las decisiones de producto, identidad y desarrollo están definidas en:
 
 - Email: [borispacex@gmail.com](mailto:borispacex@gmail.com)
 - GitHub: [borispacex](https://github.com/borispacex)
-- LinkedIn: [Boris Vargas Paucara](https://www.linkedin.com/in/boris-vargas-paucara-b5485a145/)
+- Facebook: [Boris Vargas Paucara](https://www.facebook.com/boris.vargaspaucara.9/)
+- TikTok: [@borispacex](https://www.tiktok.com/@borispacex)
 - WhatsApp: [+591 60514138](https://wa.me/59160514138)
