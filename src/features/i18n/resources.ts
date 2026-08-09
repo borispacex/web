@@ -5,7 +5,7 @@ export const resources = {
         name: 'BORISPACEX',
         title: 'BORISPACEX · Desarrollador Full Stack',
         description:
-          'Sistemas, aplicaciones web y soluciones digitales pensadas para resolver problemas reales.',
+          'Páginas web, landing pages, sistemas para negocios, WordPress y mantenimiento.',
       },
       accessibility: {
         skipToContent: 'Saltar al contenido principal',
@@ -34,87 +34,87 @@ export const resources = {
         activateDark: 'Activar tema oscuro',
       },
       hero: {
-        eyebrow: 'Full Stack Developer · Freelance',
-        brandStart: 'BORIS',
-        brandAccent: 'PACEX',
-        tagline: 'De la idea al deploy.',
+        eyebrow: 'Desarrollo web y sistemas · Freelance',
+        brandStart: 'BORISPACE',
+        brandAccent: 'X',
+        tagline: 'De la idea a una solución que funciona.',
         description:
-          'Desarrollo sistemas, aplicaciones web y soluciones digitales pensadas para resolver problemas reales.',
+          'Creo páginas web y sistemas que ayudan a mostrar tu negocio, organizar el trabajo y atender mejor a tus clientes.',
         primaryCta: 'Hablemos de tu proyecto',
         manifesto: 'Code. Build. Deploy. Explore.',
         scrollLabel: 'Explorar la propuesta de valor',
       },
       value: {
-        eyebrow: 'Características',
-        statement: 'Tecnología construida para avanzar',
+        eyebrow: 'Cómo trabajo',
+        statement: 'Soluciones claras para hacer crecer tu negocio',
         description:
-          'Soluciones digitales pensadas para resolver necesidades reales, mantenerse claras y evolucionar con cada proyecto.',
+          'Te acompaño desde la idea hasta la entrega con una solución fácil de entender, usar y mejorar.',
         items: {
           purpose: {
-            title: 'Enfoque en el problema',
+            title: 'Pensado para tu negocio',
             description:
-              'Cada decisión técnica parte de una necesidad real, no de la tecnología por sí sola.',
+              'primero entiendo qué necesitas y qué resultado esperas antes de proponerte una solución.',
           },
           systems: {
-            title: 'Visión de sistema',
+            title: 'Fácil de usar',
             description:
-              'Frontend, backend y datos trabajan como una solución coherente, mantenible y preparada para evolucionar.',
+              'cada pantalla y función se diseña para que tú y tus clientes puedan utilizarla sin complicaciones.',
           },
           scalability: {
-            title: 'Preparado para crecer',
+            title: 'Listo para crecer',
             description:
-              'una base ordenada que permite ampliar funciones sin rehacer el producto desde cero.',
+              'puedes comenzar con lo necesario y agregar nuevas funciones cuando tu negocio las requiera.',
           },
           adaptability: {
-            title: 'Tecnología adaptable',
+            title: 'Hecho a tu medida',
             description:
-              'las herramientas se eligen según el proyecto y no por seguir una solución única.',
+              'la solución se adapta a tu forma de trabajar, tus objetivos y el presupuesto disponible.',
           },
           communication: {
-            title: 'Avances transparentes',
+            title: 'Avances claros',
             description:
-              'comunicación directa para conocer el estado del trabajo y tomar decisiones a tiempo.',
+              'sabrás qué se está realizando, qué sigue y cuándo podrás revisar cada avance.',
           },
           partnership: {
-            title: 'Proceso cercano',
+            title: 'Acompañamiento cercano',
             description:
-              'Comunicación clara, avances visibles y decisiones compartidas durante todo el desarrollo.',
+              'podrás resolver dudas y tomar decisiones conmigo durante todo el proyecto.',
           },
         },
       },
       services: {
-        eyebrow: 'Capacidades',
-        title: 'Servicios tecnológicos',
+        eyebrow: 'Servicios',
+        title: 'Soluciones digitales para tu negocio',
         description:
-          'Impulso la transformación digital de negocios con soluciones a medida, escalables y claras. Tecnología elegida para convertir necesidades complejas en herramientas útiles.',
-        cta: 'Más información',
+          'Creo y mantengo herramientas digitales para ayudarte a vender, presentar tus servicios y organizar mejor tu trabajo.',
+        cta: 'Cuéntame qué necesitas',
         items: {
           web: {
-            title: 'Sistemas web',
+            title: 'Páginas web y landing pages',
             description:
-              'Aplicaciones web rápidas, accesibles y preparadas para crecer con el producto.',
+              'Sitios claros y atractivos para presentar tu negocio, promocionar un servicio o conseguir contactos.',
           },
           business: {
-            title: 'Aplicaciones empresariales',
+            title: 'Sistemas para tu negocio',
             description:
-              'Herramientas que organizan procesos, centralizan información y apoyan la operación diaria.',
+              'Herramientas a medida para organizar información, tareas, ventas o procesos del día a día.',
           },
           backend: {
-            title: 'Backend e integraciones',
+            title: 'Sitios en WordPress',
             description:
-              'Servicios robustos e integraciones que conectan productos, plataformas y flujos de trabajo.',
+              'Creación, mejora y actualización de sitios que puedas administrar con facilidad.',
           },
           automation: {
-            title: 'Automatización',
+            title: 'Mantenimiento y soporte',
             description:
-              'Soluciones que reducen tareas repetitivas y hacen más eficientes los procesos digitales.',
+              'Correcciones, mejoras, actualizaciones y acompañamiento para mantener tu sistema funcionando.',
           },
         },
       },
       projects: {
         eyebrow: 'Proyectos',
-        title: 'Proyectos digitales con propósito.',
-        description: 'Trabajo publicado y soluciones que actualmente se encuentran en desarrollo.',
+        title: 'Soluciones que ya están tomando forma.',
+        description: 'Conoce proyectos publicados y sistemas que actualmente se encuentran en desarrollo.',
         status: {
           published: 'Publicado',
           inDevelopment: 'En desarrollo',
@@ -164,16 +164,16 @@ export const resources = {
       contact: {
         eyebrow: 'Contacto',
         title: 'Hablemos de tu proyecto.',
-        description: 'Canales oficiales para conversar sobre tu idea, consulta o propuesta.',
+        description: 'Cuéntame qué necesitas. Te ayudaré a encontrar una solución clara y adecuada para tu negocio.',
         methods: {
           whatsapp: {
             title: 'WhatsApp',
-            description: 'Envía un mensaje directo para iniciar una conversación rápida.',
+            description: 'Escríbeme para conversar rápidamente sobre tu idea o el problema que quieres resolver.',
             action: 'Enviar mensaje',
           },
           email: {
             title: 'Correo electrónico',
-            description: 'Escribe para consultas detalladas, requisitos o propuestas de proyecto.',
+            description: 'Envíame los detalles de tu proyecto y te responderé con los siguientes pasos.',
             action: 'Escribir correo',
           },
         },
@@ -185,7 +185,7 @@ export const resources = {
         },
       },
       footer: {
-        copyright: '© {{year}} BORISPACEX. Todos los derechos reservados.',
+        rights: 'Todos los derechos reservados.',
       },
       floating: {
         whatsapp: 'Contactar a BORISPACEX mediante WhatsApp',
@@ -200,7 +200,7 @@ export const resources = {
         name: 'BORISPACEX',
         title: 'BORISPACEX · Full Stack Developer',
         description:
-          'Software systems, web applications and digital solutions built to solve real problems.',
+          'Websites, landing pages, business systems, WordPress and maintenance services.',
       },
       accessibility: {
         skipToContent: 'Skip to main content',
@@ -229,87 +229,87 @@ export const resources = {
         activateDark: 'Switch to dark theme',
       },
       hero: {
-        eyebrow: 'Full Stack Developer · Freelance',
-        brandStart: 'BORIS',
-        brandAccent: 'PACEX',
-        tagline: 'From idea to deployment.',
+        eyebrow: 'Web and business systems · Freelance',
+        brandStart: 'BORISPACE',
+        brandAccent: 'X',
+        tagline: 'From an idea to a solution that works.',
         description:
-          'I build software systems, web applications and digital solutions designed to solve real problems.',
+          'I create websites and systems that help showcase your business, organize work and better serve your customers.',
         primaryCta: "Let's talk about your project",
         manifesto: 'Code. Build. Deploy. Explore.',
         scrollLabel: 'Explore the value proposition',
       },
       value: {
-        eyebrow: 'Features',
-        statement: 'Technology built to move forward',
+        eyebrow: 'How I work',
+        statement: 'Clear solutions to help your business grow',
         description:
-          'Digital solutions designed to solve real needs, remain clear and evolve with every project.',
+          'I guide you from the initial idea to delivery with a solution that is easy to understand, use and improve.',
         items: {
           purpose: {
-            title: 'Problem-focused',
+            title: 'Built around your business',
             description:
-              'Every technical decision starts with a real need, not with technology for its own sake.',
+              'I first understand what you need and the result you expect before proposing a solution.',
           },
           systems: {
-            title: 'Systems thinking',
+            title: 'Easy to use',
             description:
-              'Frontend, backend and data work as one coherent, maintainable solution ready to evolve.',
+              'every screen and feature is designed so you and your customers can use it without complications.',
           },
           scalability: {
             title: 'Ready to grow',
             description:
-              'a well-structured foundation that supports new features without rebuilding the product from scratch.',
+              'start with what you need today and add new features when your business requires them.',
           },
           adaptability: {
-            title: 'Adaptable technology',
+            title: 'Tailored to your needs',
             description:
-              'tools are selected around each project instead of forcing every need into one solution.',
+              'the solution adapts to your workflow, goals and available budget.',
           },
           communication: {
-            title: 'Transparent progress',
+            title: 'Clear progress',
             description:
-              'direct communication to understand the work status and make timely decisions.',
+              'you will know what is being done, what comes next and when each update is ready to review.',
           },
           partnership: {
-            title: 'Collaborative process',
+            title: 'Close support',
             description:
-              'Clear communication, visible progress and shared decisions throughout development.',
+              'you can ask questions and make decisions with me throughout the project.',
           },
         },
       },
       services: {
-        eyebrow: 'Capabilities',
-        title: 'Technology services',
+        eyebrow: 'Services',
+        title: 'Digital solutions for your business',
         description:
-          'I help businesses move their digital transformation forward with tailored, scalable and clear solutions. Technology selected to turn complex needs into useful tools.',
-        cta: 'More information',
+          'I create and maintain digital tools that help you sell, present your services and organize your work.',
+        cta: 'Tell me what you need',
         items: {
           web: {
-            title: 'Web systems',
+            title: 'Websites and landing pages',
             description:
-              'Fast, accessible web applications designed to grow alongside the product.',
+              'Clear, attractive sites to present your business, promote a service or generate new contacts.',
           },
           business: {
-            title: 'Business applications',
+            title: 'Systems for your business',
             description:
-              'Tools that organize processes, centralize information and support daily operations.',
+              'Tailored tools to organize information, tasks, sales or everyday processes.',
           },
           backend: {
-            title: 'Backend and integrations',
+            title: 'WordPress websites',
             description:
-              'Robust services and integrations connecting products, platforms and workflows.',
+              'Creation, improvement and updates for websites you can manage with ease.',
           },
           automation: {
-            title: 'Automation',
+            title: 'Maintenance and support',
             description:
-              'Solutions that reduce repetitive work and make digital processes more efficient.',
+              'Fixes, improvements, updates and support to keep your system working properly.',
           },
         },
       },
       projects: {
         eyebrow: 'Projects',
-        title: 'Purposeful digital projects.',
-        description: 'Published work and solutions that are currently in development.',
+        title: 'Solutions already taking shape.',
+        description: 'Explore published projects and systems that are currently in development.',
         status: {
           published: 'Published',
           inDevelopment: 'In development',
@@ -359,16 +359,16 @@ export const resources = {
       contact: {
         eyebrow: 'Contact',
         title: "Let's talk about your project.",
-        description: 'Official channels to discuss your idea, question or proposal.',
+        description: 'Tell me what you need. I will help you find a clear solution that fits your business.',
         methods: {
           whatsapp: {
             title: 'WhatsApp',
-            description: 'Send a direct message to start a quick conversation.',
+            description: 'Message me to quickly discuss your idea or the problem you want to solve.',
             action: 'Send a message',
           },
           email: {
             title: 'Email',
-            description: 'Write with detailed questions, requirements or project proposals.',
+            description: 'Send me your project details and I will reply with the next steps.',
             action: 'Write an email',
           },
         },
@@ -380,7 +380,7 @@ export const resources = {
         },
       },
       footer: {
-        copyright: '© {{year}} BORISPACEX. All rights reserved.',
+        rights: 'All rights reserved.',
       },
       floating: {
         whatsapp: 'Contact BORISPACEX through WhatsApp',

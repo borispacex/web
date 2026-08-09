@@ -58,7 +58,9 @@ export function Footer() {
               />
             </a>
             <p className="mt-2 text-xs text-muted-foreground">
-              {t('footer.copyright', { year: currentYear })}
+              © {currentYear}{' '}
+              <span className="font-semibold text-foreground">BORISPACE</span>
+              <span className="font-semibold text-primary">X</span>. {t('footer.rights')}
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import apiIcon from '../../assets/brand/icons/api.svg';
-import deployIcon from '../../assets/brand/icons/deploy.svg';
+import cloudIcon from '../../assets/brand/icons/cloud.svg';
 import laptopIcon from '../../assets/brand/icons/laptop.svg';
+import serverIcon from '../../assets/brand/icons/server.svg';
 import webIcon from '../../assets/brand/icons/web.svg';
 import { Button } from '../../components/ui/Button';
 import { Container } from '../../components/ui/Container';
@@ -10,8 +10,8 @@ import { Reveal } from '../../components/ui/Reveal';
 const services = [
   { icon: webIcon, key: 'web' },
   { icon: laptopIcon, key: 'business' },
-  { icon: apiIcon, key: 'backend' },
-  { icon: deployIcon, key: 'automation' },
+  { icon: cloudIcon, key: 'backend' },
+  { icon: serverIcon, key: 'automation' },
 ] as const;
 
 export function Services() {
