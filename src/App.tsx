@@ -1,12 +1,10 @@
 import { Footer } from './components/layout/Footer';
-import { FloatingActions } from './components/layout/FloatingActions';
 import { Header } from './components/layout/Header';
 import { Contact } from './sections/contact/Contact';
-import { Growth } from './sections/growth/Growth';
 import { Hero } from './sections/hero/Hero';
+import { Pricing } from './sections/pricing/Pricing';
 import { Projects } from './sections/projects/Projects';
 import { Services } from './sections/services/Services';
-import { ValueProposition } from './sections/value/ValueProposition';
 
 function App() {
   const { t } = useTranslation();
@@ -20,14 +18,12 @@ function App() {
         <Header />
         <main id="main-content" tabIndex={-1}>
           <Hero />
-          <ValueProposition />
           <Services />
+          <Pricing />
           <Projects />
-          <Growth />
           <Contact />
         </main>
         <Footer />
-        <FloatingActions />
       </div>
     </LazyMotion>
   );

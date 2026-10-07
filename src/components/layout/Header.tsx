@@ -9,6 +9,7 @@ import { ThemeSelector } from '../ui/ThemeSelector';
 const navigationItems = [
   { href: '#inicio', translationKey: 'navigation.home' },
   { href: '#servicios', translationKey: 'navigation.services' },
+  { href: '#precios', translationKey: 'navigation.pricing' },
   { href: '#proyectos', translationKey: 'navigation.projects' },
   { href: '#contacto', translationKey: 'navigation.contact' },
 ] as const;
@@ -36,7 +37,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-2xl">
-      <Container className="flex min-h-[4.75rem] items-center justify-between gap-4">
+      <Container className="flex min-h-[4.5rem] items-center justify-between gap-4">
         <a
           aria-label={t('app.name')}
           className="group flex items-center rounded-sm"
@@ -46,19 +47,19 @@ export function Header() {
           <img
             alt=""
             aria-hidden="true"
-            className="h-13 w-auto transition-transform group-hover:scale-[1.02] dark:hidden"
+            className="h-11 w-auto transition-transform group-hover:scale-[1.02] dark:hidden"
             src={brandAssets.horizontalLight}
           />
           <img
             alt=""
             aria-hidden="true"
-            className="hidden h-13 w-auto transition-transform group-hover:scale-[1.02] dark:block"
+            className="hidden h-11 w-auto transition-transform group-hover:scale-[1.02] dark:block"
             src={brandAssets.horizontalDark}
           />
         </a>
 
         <nav aria-label={t('navigation.primary')} className="hidden lg:block">
-          <ul className="flex items-center gap-7 rounded-full border border-border bg-surface/70 px-6 py-3">
+          <ul className="flex items-center gap-7">
             {navigationItems.map((item) => (
               <li key={item.href}>
                 <a

@@ -1,60 +1,68 @@
 import { useTranslation } from 'react-i18next';
-import cloudIcon from '../../assets/brand/icons/cloud.svg';
-import laptopIcon from '../../assets/brand/icons/laptop.svg';
-import serverIcon from '../../assets/brand/icons/server.svg';
-import webIcon from '../../assets/brand/icons/web.svg';
+import { ArrowRight } from 'lucide-react';
+import automateImage from '../../assets/brand/services/service-automate-card.png';
+import evolveImage from '../../assets/brand/services/service-evolve-card.png';
+import newImage from '../../assets/brand/services/service-new-card.png';
+import supportImage from '../../assets/brand/services/service-support-card.png';
 import { Button } from '../../components/ui/Button';
 import { Container } from '../../components/ui/Container';
 import { Reveal } from '../../components/ui/Reveal';
 
 const services = [
-  { icon: webIcon, key: 'web' },
-  { icon: laptopIcon, key: 'business' },
-  { icon: cloudIcon, key: 'backend' },
-  { icon: serverIcon, key: 'automation' },
+  { image: newImage, key: 'web', number: '01' },
+  { image: evolveImage, key: 'business', number: '02' },
+  { image: automateImage, key: 'backend', number: '03' },
+  { image: supportImage, key: 'automation', number: '04' },
 ] as const;
 
 export function Services() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="services-title" className="brand-code-pattern bg-background" id="servicios">
-      <Container className="grid gap-12 py-24 sm:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:py-20">
-        <Reveal className="max-w-2xl">
+    <section aria-labelledby="services-title" className="bg-background" id="servicios">
+      <Container className="py-14 sm:py-16 lg:py-18">
+        <Reveal className="grid gap-3 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-10">
+          <div>
           <p className="text-xs font-semibold tracking-[0.28em] text-muted-foreground uppercase">
             {t('services.eyebrow')}
           </p>
           <h2
-            className="mt-5 max-w-xl text-[clamp(2.75rem,4.5vw,4.25rem)] leading-[0.96] font-semibold tracking-[-0.055em] text-balance"
+            className="mt-3 max-w-xl text-[clamp(2rem,3vw,2.75rem)] leading-tight font-semibold tracking-[-0.04em] text-balance"
             id="services-title"
           >
             {t('services.title')}
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground lg:max-w-xl">
+          </div>
+          <p className="max-w-2xl text-base leading-7 text-muted-foreground lg:max-w-xl">
             {t('services.description')}
           </p>
-          <Button
-            className="mt-8 bg-foreground px-6 text-background hover:opacity-85 hover:brightness-100"
-            href="#contacto"
-          >
-            {t('services.cta')}
-          </Button>
         </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {services.map(({ icon, key }) => (
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {services.map(({ image, key, number }) => (
             <Reveal className="h-full" key={key}>
-              <article className="group flex h-full min-h-40 flex-col items-center justify-center rounded-[1.5rem] border border-border bg-surface px-5 py-7 text-center transition-[border-color,transform,background-color] hover:-translate-y-1 hover:border-primary/40 hover:bg-surface-alt lg:aspect-[1.2/1] lg:min-h-0">
-                <span className="grid size-12 place-items-center text-foreground transition-colors group-hover:text-primary">
-                  <img alt="" aria-hidden="true" className="size-9 dark:invert" src={icon} />
-                </span>
-                <h3 className="mt-5 max-w-40 text-sm font-semibold leading-5">
+              <article className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-5 transition-[border-color,transform] hover:-translate-y-1 hover:border-primary/40">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold tracking-[0.16em] text-primary">{t(`services.items.${key}.label`)}</span>
+                  <span className="font-mono text-xs text-muted-foreground">{number}</span>
+                </div>
+                <div className="service-visual">
+                  <img alt={t(`services.items.${key}.imageAlt`)} height="320" loading="lazy" src={image} width="480" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold">
                   {t(`services.items.${key}.title`)}
                 </h3>
+                <p className="mt-2 text-sm leading-5 text-muted-foreground">
+                  {t(`services.items.${key}.description`)}
+                </p>
+                <p className="mt-4 border-t border-border pt-3 text-xs font-semibold text-foreground">
+                  <span className="mr-2 text-primary">✓</span>{t(`services.items.${key}.result`)}
+                </p>
               </article>
             </Reveal>
           ))}
         </div>
+        <Button className="mt-6 gap-2" href="#contacto">{t('services.cta')}<ArrowRight aria-hidden="true" className="size-4" /></Button>
       </Container>
     </section>
   );

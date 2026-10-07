@@ -1,4 +1,4 @@
-import { ArrowUpRight, BriefcaseBusiness, HeartPulse, Store, UtensilsCrossed } from 'lucide-react';
+import { ArrowUpRight, BriefcaseBusiness, UtensilsCrossed } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Container } from '../../components/ui/Container';
@@ -10,7 +10,7 @@ const projectAsset = (path: string): string => `${import.meta.env.BASE_URL}proje
 type Project = {
   icon: LucideIcon;
   image?: string;
-  key: 'cv' | 'restaurant' | 'hardwareStore' | 'physiotherapy';
+  key: 'cv' | 'restaurant';
   url?: string;
 };
 
@@ -27,8 +27,6 @@ const projects: readonly Project[] = [
     key: 'restaurant',
     url: 'https://pollosmision.github.io/lp/',
   },
-  { icon: Store, key: 'hardwareStore' },
-  { icon: HeartPulse, key: 'physiotherapy' },
 ] as const;
 
 export function Projects() {
@@ -37,7 +35,7 @@ export function Projects() {
   return (
     <section
       aria-labelledby="projects-title"
-      className="brand-projects-background border-y border-border"
+      className="border-y border-border bg-surface-alt"
       id="proyectos"
     >
       <Container className="py-24 sm:py-28 lg:py-20">
@@ -50,7 +48,7 @@ export function Projects() {
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
           {projects.map(({ icon: Icon, image, key, url }) => {
             const isPublished = Boolean(url);
 
