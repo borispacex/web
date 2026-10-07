@@ -46,8 +46,8 @@ export function Services() {
                   <span className="text-xs font-semibold tracking-[0.16em] text-primary">{t(`services.items.${key}.label`)}</span>
                   <span className="font-mono text-xs text-muted-foreground">{number}</span>
                 </div>
-                <div className="service-visual">
-                  <img alt={t(`services.items.${key}.imageAlt`)} height="320" loading="lazy" src={image} width="480" />
+                <div className="mt-4 h-29 overflow-hidden rounded-[0.85rem] bg-surface-alt">
+                  <img alt={t(`services.items.${key}.imageAlt`)} className="size-full object-cover" height="320" loading="lazy" src={image} width="480" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold">
                   {t(`services.items.${key}.title`)}

@@ -1,4 +1,5 @@
 import { Footer } from './components/layout/Footer';
+import { FloatingActions } from './components/layout/FloatingActions';
 import { Header } from './components/layout/Header';
 import { Contact } from './sections/contact/Contact';
 import { Hero } from './sections/hero/Hero';
@@ -12,7 +13,7 @@ function App() {
   return (
     <LazyMotion features={domAnimation} strict>
       <div className="min-h-screen bg-background text-foreground">
-        <a className="skip-link" href="#main-content">
+        <a className="fixed top-3 left-3 z-100 -translate-y-[200%] rounded-lg bg-foreground px-4 py-3 font-semibold text-background focus:translate-y-0" href="#main-content">
           {t('accessibility.skipToContent')}
         </a>
         <Header />
@@ -24,6 +25,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <FloatingActions />
       </div>
     </LazyMotion>
   );

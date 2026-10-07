@@ -9,10 +9,11 @@ import {
 } from '../../features/theme/theme';
 
 type ThemeSelectorProps = {
+  circular?: boolean;
   id: string;
 };
 
-export function ThemeSelector({ id }: ThemeSelectorProps) {
+export function ThemeSelector({ circular = false, id }: ThemeSelectorProps) {
   const { t } = useTranslation();
   const [theme, updateTheme] = useState<Theme>(() => getResolvedTheme());
 
@@ -41,7 +42,7 @@ export function ThemeSelector({ id }: ThemeSelectorProps) {
   return (
     <button
       aria-label={label}
-      className="grid size-10 place-items-center rounded-full border border-border bg-surface-alt text-foreground transition-colors hover:bg-surface"
+      className={`grid size-10 place-items-center border border-border bg-surface text-foreground transition-colors hover:bg-surface-alt ${circular ? 'rounded-full' : 'rounded-lg'}`}
       id={id}
       onClick={handleToggle}
       title={label}

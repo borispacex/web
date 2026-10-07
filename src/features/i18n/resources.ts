@@ -19,6 +19,7 @@ export const resources = {
         pricing: 'Precios',
         projects: 'Proyectos',
         contact: 'Contacto',
+        quote: 'Cotizar',
       },
       menu: {
         open: 'Abrir menú',
@@ -28,6 +29,10 @@ export const resources = {
         label: 'Idioma',
         es: 'ES',
         en: 'EN',
+        switchTo: {
+          es: 'Cambiar a español',
+          en: 'Cambiar a inglés',
+        },
       },
       theme: {
         label: 'Tema',
@@ -260,6 +265,8 @@ export const resources = {
         rights: 'Todos los derechos reservados.',
       },
       floating: {
+        contact: 'Contacto rápido',
+        quote: 'Escríbeme por WhatsApp',
         whatsapp: 'Contactar a BORISPACEX mediante WhatsApp',
         whatsappShort: 'WhatsApp',
         backToTop: 'Volver arriba',
@@ -286,6 +293,7 @@ export const resources = {
         pricing: 'Pricing',
         projects: 'Projects',
         contact: 'Contact',
+        quote: 'Get a quote',
       },
       menu: {
         open: 'Open menu',
@@ -295,6 +303,10 @@ export const resources = {
         label: 'Language',
         es: 'ES',
         en: 'EN',
+        switchTo: {
+          es: 'Switch to Spanish',
+          en: 'Switch to English',
+        },
       },
       theme: {
         label: 'Theme',
@@ -527,6 +539,8 @@ export const resources = {
         rights: 'All rights reserved.',
       },
       floating: {
+        contact: 'Quick contact',
+        quote: 'Chat on WhatsApp',
         whatsapp: 'Contact BORISPACEX through WhatsApp',
         whatsappShort: 'WhatsApp',
         backToTop: 'Back to top',

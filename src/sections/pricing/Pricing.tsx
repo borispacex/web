@@ -19,7 +19,7 @@ function ServiceDiagram({ plan }: { plan: PlanKey }) {
   if (plan === 'landing') {
     return (
       <div className="grid gap-3 rounded-2xl border border-border bg-background p-4" aria-hidden="true">
-        <div className="flex gap-1.5"><i /><i /><i /></div>
+        <div className="flex gap-1.5">{[0, 1, 2].map((item) => <i className="size-[0.45rem] rounded-full bg-muted-foreground" key={item} />)}</div>
         <div className="rounded-xl bg-primary/12 p-5 text-center text-sm font-semibold text-primary">{t('pricing.diagram.message')}</div>
         <div className="grid grid-cols-3 gap-2">
           {['service', 'proof', 'contact'].map((key) => <div className="rounded-lg bg-surface-alt p-3 text-center text-xs" key={key}>{t(`pricing.diagram.${key}`)}</div>)}
@@ -43,9 +43,9 @@ function ServiceDiagram({ plan }: { plan: PlanKey }) {
 
   return (
     <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 rounded-2xl border border-border bg-background p-4" aria-hidden="true">
-      <div className="grid gap-2 text-center text-xs"><span className="diagram-node"><Users />{t('pricing.diagram.users')}</span><span className="diagram-node"><Monitor />{t('pricing.diagram.admin')}</span></div>
+      <div className="grid gap-2 text-center text-xs"><span className="grid min-h-18 place-items-center gap-1.5 rounded-xl border border-border bg-surface p-2.5 [&_svg]:w-5 [&_svg]:text-primary"><Users />{t('pricing.diagram.users')}</span><span className="grid min-h-18 place-items-center gap-1.5 rounded-xl border border-border bg-surface p-2.5 [&_svg]:w-5 [&_svg]:text-primary"><Monitor />{t('pricing.diagram.admin')}</span></div>
       <span className="text-primary">→</span>
-      <div className="grid gap-2 text-center text-xs"><span className="diagram-node"><Database />{t('pricing.diagram.database')}</span><span className="diagram-node"><LayoutGrid />{t('pricing.diagram.reports')}</span></div>
+      <div className="grid gap-2 text-center text-xs"><span className="grid min-h-18 place-items-center gap-1.5 rounded-xl border border-border bg-surface p-2.5 [&_svg]:w-5 [&_svg]:text-primary"><Database />{t('pricing.diagram.database')}</span><span className="grid min-h-18 place-items-center gap-1.5 rounded-xl border border-border bg-surface p-2.5 [&_svg]:w-5 [&_svg]:text-primary"><LayoutGrid />{t('pricing.diagram.reports')}</span></div>
     </div>
   );
 }

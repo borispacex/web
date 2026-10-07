@@ -45,7 +45,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border bg-[var(--footer-background)] text-foreground">
-      <Container className="py-8 sm:py-10">
+      <Container className="pt-8 pb-24 sm:py-10">
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(12rem,0.8fr)_minmax(32rem,1.5fr)_auto]">
           <div>
             <a aria-label={t('app.name')} className="inline-flex items-center" href="#inicio">

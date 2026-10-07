@@ -29,41 +29,45 @@ export function Header() {
       }
     };
 
+    document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [isMenuOpen]);
 
   const closeMenu = (): void => setIsMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-2xl">
-      <Container className="flex min-h-[4.5rem] items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
+      <Container className="flex min-h-16 items-center justify-between gap-4">
         <a
           aria-label={t('app.name')}
-          className="group flex items-center rounded-sm"
+          className="group flex shrink-0 items-center rounded-md"
           href="#inicio"
           onClick={closeMenu}
         >
           <img
             alt=""
             aria-hidden="true"
-            className="h-11 w-auto transition-transform group-hover:scale-[1.02] dark:hidden"
+            className="h-9 w-auto transition-opacity group-hover:opacity-80 dark:hidden"
             src={brandAssets.horizontalLight}
           />
           <img
             alt=""
             aria-hidden="true"
-            className="hidden h-11 w-auto transition-transform group-hover:scale-[1.02] dark:block"
+            className="hidden h-9 w-auto transition-opacity group-hover:opacity-80 dark:block"
             src={brandAssets.horizontalDark}
           />
         </a>
 
-        <nav aria-label={t('navigation.primary')} className="hidden lg:block">
-          <ul className="flex items-center gap-7">
+        <nav aria-label={t('navigation.primary')} className="hidden xl:block">
+          <ul className="flex items-center gap-1">
             {navigationItems.map((item) => (
               <li key={item.href}>
                 <a
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="inline-flex min-h-9 items-center rounded-lg px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-surface-alt hover:text-foreground"
                   href={item.href}
                 >
                   {t(item.translationKey)}
@@ -73,63 +77,75 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden items-center gap-2 xl:flex">
           <LanguageSelector id="desktop-language" />
           <ThemeSelector id="desktop-theme" />
           <a
-            className="ml-1 inline-flex min-h-10 items-center gap-2 rounded-full bg-foreground px-5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
+            className="ml-1 inline-flex min-h-10 items-center gap-2 rounded-lg bg-primary-strong px-4 text-sm font-semibold text-white transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110"
             href="#contacto"
           >
-            {t('navigation.contact')}
+            {t('navigation.quote')}
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </a>
         </div>
 
-        <button
-          aria-controls="mobile-navigation"
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? t('menu.close') : t('menu.open')}
-          className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-surface text-foreground lg:hidden"
-          onClick={() => setIsMenuOpen((current) => !current)}
-          ref={menuButtonRef}
-          type="button"
-        >
-          {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-        </button>
+        <div className="flex items-center gap-2 xl:hidden">
+          <LanguageSelector compact id="mobile-header-language" />
+          <ThemeSelector circular id="mobile-header-theme" />
+          <button
+            aria-controls="mobile-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? t('menu.close') : t('menu.open')}
+            className="inline-flex size-10 items-center justify-center rounded-lg border border-border bg-surface text-foreground transition-colors hover:bg-surface-alt"
+            onClick={() => setIsMenuOpen((current) => !current)}
+            ref={menuButtonRef}
+            type="button"
+          >
+            {isMenuOpen ? <X aria-hidden="true" className="size-5" /> : <Menu aria-hidden="true" className="size-5" />}
+          </button>
+        </div>
       </Container>
 
-      <div
-        className={`${isMenuOpen ? 'grid' : 'hidden'} border-t border-border bg-background/95 backdrop-blur-2xl lg:hidden`}
-        id="mobile-navigation"
-      >
-        <Container className="grid gap-6 py-6">
+      {isMenuOpen && (
+        <div className="absolute inset-x-0 top-full z-40 h-[calc(100dvh-4rem)] xl:hidden">
+          <button
+            aria-label={t('menu.close')}
+            className="absolute inset-0 cursor-default bg-void/55 backdrop-blur-sm"
+            onClick={closeMenu}
+            type="button"
+          />
+          <aside
+            aria-label={t('navigation.mobile')}
+            className="absolute top-0 right-0 grid h-full w-[min(22rem,92vw)] content-start gap-6 overflow-y-auto border-l border-border bg-background p-5 shadow-2xl"
+            id="mobile-navigation"
+          >
           <nav aria-label={t('navigation.mobile')}>
-            <ul className="grid gap-2">
+            <ul className="grid gap-1">
               {navigationItems.map((item) => (
                 <li key={item.href}>
                   <a
-                    className="flex min-h-11 items-center rounded-lg px-3 font-medium text-foreground hover:bg-surface-alt"
+                    className="flex min-h-12 items-center justify-between rounded-xl px-3 font-medium text-foreground transition-colors hover:bg-surface-alt"
                     href={item.href}
                     onClick={closeMenu}
                   >
                     {t(item.translationKey)}
+                    <ArrowUpRight aria-hidden="true" className="size-4 text-muted-foreground" />
                   </a>
                 </li>
               ))}
             </ul>
           </nav>
-          <div className="grid gap-5 border-t border-border pt-5 sm:grid-cols-2">
-            <div className="flex items-center justify-between gap-4 sm:justify-start">
-              <span className="text-sm text-muted-foreground">{t('language.label')}</span>
-              <LanguageSelector id="mobile-language" />
-            </div>
-            <div className="flex items-center justify-between gap-4 sm:justify-start">
-              <span className="text-sm text-muted-foreground">{t('theme.label')}</span>
-              <ThemeSelector id="mobile-theme" />
-            </div>
-          </div>
-        </Container>
-      </div>
+          <a
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary-strong px-5 text-sm font-semibold text-white"
+            href="#contacto"
+            onClick={closeMenu}
+          >
+            {t('navigation.quote')}
+            <ArrowUpRight aria-hidden="true" className="size-4" />
+          </a>
+          </aside>
+        </div>
+      )}
     </header>
   );
 }
